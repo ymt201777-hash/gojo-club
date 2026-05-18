@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>認定NPO法人五条クラブ</title>
+  <meta name="description" content="認定NPO法人五条クラブは、日本や発展途上国で、教育・スポーツ・文化に関わる活動や支援を行っています。">
+  <meta property="og:title" content="認定NPO法人五条クラブ">
+  <meta property="og:description" content="日本や発展途上国で、教育・スポーツ・文化に関わる活動や支援を行っています。">
+  <meta property="og:url" content="https://gojo-club.jp/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://gojo-club.jp/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-logo">
+        <img src="images/logo.svg" alt="認定NPO法人五条クラブ" class="site-logo-img">
+      </a>
+
+      <!-- PC ナビ（SVGボタン） -->
+      <nav class="header-nav">
+        <a href="#donate" class="btn-svg">
+          <img src="images/btn-support.svg" alt="支援する">
+        </a>
+        <a href="activity-report/" class="btn-svg">
+          <img src="images/btn-activity.svg" alt="活動報告">
+        </a>
+        <a href="staff/" class="btn-svg">
+          <img src="images/btn-staff.svg" alt="STAFF">
+        </a>
+      </nav>
+
+      <!-- SP: 支援するボタン（CSSボタン） -->
+      <a href="#donate" class="btn btn-sm header-support-sp">支援する</a>
+
+      <!-- SP: ハンバーガー -->
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="sp-drawer" id="spDrawer">
+      <a href="activity-report/">活動報告</a>
+      <a href="staff/">STAFF</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <picture>
+      <source media="(max-width: 768px)" srcset="images/hero-sp.jpg">
+      <img
+        src="images/hero-pc.jpg"
+        alt="KOMOREBI小学校 ウガンダ共和国"
+        class="hero-img"
+        width="1440" height="480"
+        fetchpriority="high"
+      >
+    </picture>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="container">
+      <p>
+        認定NPO法人五条クラブは、日本や発展途上国で、<br>
+        教育・スポーツ・文化に関わる活動や支援を行っています。<br>
+        <br>
+        子どもたちが持つ可能性を、教育とスポーツの力で育みながら、<br>
+        生涯にわたる学びやスポーツの広がりを大切にしています。<br>
+        <br>
+        こうした取り組みを通じて、人と人とがつながり、<br>
+        社会に平和が根づいていくことを目指しています。
+      </p>
+    </div>
+  </section>
+
+  <!-- ACTIVITY REPORT -->
+  <section class="section">
+    <div class="container">
+      <!-- デザイナー提供SVGセクションタイトル -->
+      <img
+        src="images/title-activity-report.svg"
+        alt="ACTIVITY REPORT"
+        class="section-title-svg"
+      >
+
+      <div class="activity-report-card">
+        <!-- 左: 写真2枚 -->
+        <div class="activity-report-images">
+          <img
+            src="images/top-activity-1.jpeg"
+            alt="ウガンダ共和国大使館での感謝状授与"
+            loading="lazy"
+          >
+          <img
+            src="images/top-activity-2.jpeg"
+            alt="ウガンダ共和国からの感謝状"
+            loading="lazy"
+          >
+        </div>
+
+        <!-- 右: テキスト -->
+        <div class="activity-report-text">
+          <h3>ウガンダ共和国から<br>感謝状をいただきました。</h3>
+          <p>
+            本クラブの学校づくりがウガンダ共和国の教育資質向上に多大な貢献をしたことを認めていただきました。KOMOREBI事業は在日ウガンダ大使館の後援を受けて実施しています。
+          </p>
+          <p class="link-note">その他の活動はこちらからご覧ください。</p>
+          <a href="activity-report/" class="btn-svg">
+            <img src="images/btn-activity.svg" alt="活動報告">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSOR -->
+  <section class="section" style="background:#fafafa; padding-top:60px; padding-bottom:60px;">
+    <div class="container">
+      <img src="images/title-sponsor.svg" alt="SPONSOR" class="section-title-svg">
+      <ul class="sponsor-flex">
+        <li>株式会社セイワ工業</li>
+        <li>ここいの株式会社</li>
+        <li>F.C. Toyoake</li>
+        <li>株式会社2ndADVANCE</li>
+        <li>クリスタルコーヒー</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PARTNER -->
+  <section class="section" style="padding-top:60px; padding-bottom:60px;">
+    <div class="container">
+      <img src="images/title-partner.svg" alt="PARTNER" class="section-title-svg">
+      <ul class="partner-flex">
+        <li>株式会社北斗</li>
+        <li>株式会社MIYOSHI</li>
+        <li>公共財団法人世界こども財団</li>
+        <li>司法書士法人やすい事務所</li>
+        <li>山田康博税理士事務所</li>
+        <li>hh-jpn</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 支援金募集要項 -->
+  <section class="section" id="donate" style="background:#fafafa; padding-top:60px; padding-bottom:60px;">
+    <div class="container">
+      <img src="images/title-donate.svg" alt="支援金募集要項" class="section-title-svg">
+      <p class="donate-body">
+        わたしたち認定NPO法人五条クラブは、世界の子どもたちのために教育とスポーツの環境を整備して、将来を担える若者の育成を目標としています。ウガンダ共和国・ネパール連邦民主共和国への支援に加えて、国内外の災害復興支援等の活動も継続しており、今後も多くの皆様のご協力を必要としています。何卒ご支援を賜りますようお願い申し上げます。下記よりお申込みをいただけますと幸甚です。個人情報の取り扱いについて寄付の管理・領収書発行・連絡業務以外の使用はいたしません。ご理解ご協力のほどよろしくお願い申し上げます。
+      </p>
+      <div class="donate-btn-wrap">
+        <!-- TODO: お申込フォームURLに差し替えてください -->
+        <a href="#" class="btn">お申込はこちら</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <img src="images/title-contact.svg" alt="CONTACT" class="section-title-svg">
+
+      <p class="contact-org">認定NPO法人五条クラブ</p>
+
+      <address class="contact-address">
+        〒452-0943<br>
+        愛知県清須市新清洲2-9-13 千成ソミュール清洲501<br>
+        <!-- TODO: 実際の電話番号・FAX番号に差し替えてください -->
+        Tel : 000-000-0000<br>
+        Fax : 000-000-0000<br>
+        Mail : <a href="mailto:ikedamc@saturn.dti.ne.jp">ikedamc@saturn.dti.ne.jp</a>
+      </address>
+
+      <div class="contact-buttons">
+        <a href="mailto:ikedamc@saturn.dti.ne.jp" class="btn-svg">
+          <img src="images/btn-contact.svg" alt="お問い合わせ">
+        </a>
+        <a href="#donate" class="btn-svg">
+          <img src="images/btn-support.svg" alt="支援する">
+        </a>
+        <a href="activity-report/" class="btn-svg">
+          <img src="images/btn-activity.svg" alt="活動報告">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2026 認定NPO法人五条クラブ All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const drawer = document.getElementById('spDrawer');
+    toggle.addEventListener('click', () => {
+      const isOpen = drawer.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
+    });
+    drawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        drawer.classList.remove('open');
+        toggle.classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
