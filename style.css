@@ -251,7 +251,10 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .staff-card-name { font-size: 22px; }   /* 名前 */
   .staff-card-role { font-size: 17px; }    /* 肩書 */
   .officers-heading { font-size: 22px; }
-  .officers-list { grid-template-columns: 1fr; gap: 8px; }
+  /* 役員: ブロックは中央配置のまま、各行を左揃え。肩書列を固定幅にして肩書・名前の開始位置を揃える */
+  .officers-list { grid-template-columns: 1fr; gap: 8px; width: fit-content; margin: 0 auto; text-align: left; }
+  .officers-list li { font-size: 22px; display: grid; grid-template-columns: 4.5em auto; column-gap: 12px; }   /* 名前22px */
+  .officer-role { font-size: 22px; margin-right: 0; }   /* 肩書22px・固定幅列で開始位置を揃える */
   .btn-svg img  { height: 40px; }
   .btn { font-size: 18px; }   /* CSSテキストボタンの文字をCONTACTのSVGボタンに合わせて統一 */
   .header-support-sp { padding: 6px 18px; }   /* ヘッダー内なので高さは抑える */
