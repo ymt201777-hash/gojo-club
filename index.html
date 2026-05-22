@@ -179,7 +179,8 @@
       </p>
       <div class="donate-btn-wrap">
         <!-- TODO: お申込フォームURLに差し替えてください -->
-        <a href="#" class="btn">お申込はこちら</a>
+        <a href="#" class="btn donate-btn-pc">お申込はこちら</a>
+        <a href="#" class="btn-svg donate-btn-sp"><img src="images/sp/btn-donate.svg" alt="お申込はこちら"></a>
       </div>
     </div>
   </section>
@@ -200,7 +201,10 @@
 
       <div class="contact-buttons">
         <a href="mailto:ikedamc@saturn.dti.ne.jp" class="btn-svg">
-          <img src="images/btn-contact.svg" alt="お問い合わせ">
+          <picture class="swap">
+            <source media="(max-width: 768px)" srcset="images/sp/btn-contact.svg">
+            <img src="images/btn-contact.svg" alt="お問い合わせ">
+          </picture>
         </a>
         <a href="#donate" class="btn-svg">
           <img src="images/btn-support.svg" alt="支援する">
