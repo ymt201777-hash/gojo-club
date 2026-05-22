@@ -193,7 +193,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .header-nav    { display: none; }
   .header-support-sp { display: block; }
   .nav-toggle    { display: flex; }
-  .hero-img      { height: 260px; }
+  .hero-img      { height: 88vh; height: calc(100svh - 50px); }
   .intro         { padding: 52px 0; }
   .intro p       { font-size: 0.95rem; line-height: 2.2; }
   .intro p br    { display: none; }               /* SPは自然に折り返す */
