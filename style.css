@@ -204,6 +204,10 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .sp-br         { display: inline; }              /* SPはご指定の改行位置で表示 */
   .section-title-svg { margin-bottom: 32px; }
   .activity-report-card { grid-template-columns: 1fr; gap: 20px; }
+  .activity-report-text h3 { font-size: 25px; line-height: 1.6; text-align: center; }
+  .activity-report-text p  { font-size: 20px; line-height: 1.85; text-align: justify; }
+  .activity-report-text .link-note { font-size: 25px; line-height: 1.6; text-align: center; }
+  .activity-report-text .btn-svg { align-self: center; }
   .sponsor-flex, .partner-flex { grid-template-columns: 1fr; gap: 6px; max-width: 100%; }
   .donate-body  { font-size: 0.92rem; text-align: justify; max-width: 100%; }
   .donate-body br { display: none; }              /* SPは自然に折り返す */
