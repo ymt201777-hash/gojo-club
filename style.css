@@ -120,7 +120,6 @@ picture.swap { display: contents; }
 /* DONATE */
 .donate-body { max-width: 700px; margin: 0 auto 36px; font-size: 1.05rem; line-height: 1.95; color: #333; text-align: center; }
 .donate-btn-wrap { text-align: center; }
-.donate-btn-sp { display: none; }   /* SP専用画像ボタン。PCではCSSテキストボタンを表示 */
 
 /* CONTACT */
 .contact-section { text-align: center; }
@@ -254,7 +253,5 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .officers-list { grid-template-columns: 1fr; gap: 8px; }
   .btn-svg img  { height: 40px; }
   .btn { font-size: 18px; }   /* CSSテキストボタンの文字をCONTACTのSVGボタンに合わせて統一 */
-  .donate-btn-pc { display: none; }            /* SPではテキストボタンを隠し */
-  .donate-btn-sp { display: inline-block; }    /* SP画像ボタン（トップ11=お申込はこちら）を表示 */
   .header-support-sp { padding: 6px 18px; }   /* ヘッダー内なので高さは抑える */
 }
