@@ -30,9 +30,10 @@
       </button>
     </div>
     <nav class="sp-drawer" id="spDrawer">
+      <a href="/">TOP</a>
       <a href="/activity-report/">活動報告</a>
       <a href="/staff/">STAFF</a>
-      <a href="/#contact">お問い合わせ</a>
+      <a href="/#contact">CONTACT</a>
     </nav>
   </header>
 
@@ -65,9 +66,10 @@
   <section class="section">
     <div class="container">
 
-      <!-- デザイナー提供SVGは未提供のためCSSタイトル代替（Claude Codeで差し替え可） -->
-      <!-- staff/index.html には専用タイトルSVGがないため中央テキスト表示 -->
-      <h2 style="text-align:center; font-size:1.5rem; letter-spacing:0.12em; font-weight:700; margin-bottom:52px;">STAFF</h2>
+      <picture class="swap">
+        <source media="(max-width: 768px)" srcset="../images/sp/title-staff.svg">
+        <img src="STAFF_PCver.svg" alt="STAFF" class="section-title-svg">
+      </picture>
 
       <ul class="staff-grid">
 

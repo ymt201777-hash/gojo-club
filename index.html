@@ -47,9 +47,10 @@
     </div>
 
     <nav class="sp-drawer" id="spDrawer">
-      <a href="activity-report/">活動報告</a>
-      <a href="staff/">STAFF</a>
-      <a href="#contact">お問い合わせ</a>
+      <a href="/">TOP</a>
+      <a href="/activity-report/">活動報告</a>
+      <a href="/staff/">STAFF</a>
+      <a href="/#contact">CONTACT</a>
     </nav>
   </header>
 
@@ -84,12 +85,15 @@
   <!-- ACTIVITY REPORT -->
   <section class="section">
     <div class="container">
-      <!-- デザイナー提供SVGセクションタイトル -->
-      <img
-        src="images/title-activity-report.svg"
-        alt="ACTIVITY REPORT"
-        class="section-title-svg"
-      >
+      <!-- デザイナー提供SVGセクションタイトル（SPは専用2行版に差し替え） -->
+      <picture class="swap">
+        <source media="(max-width: 768px)" srcset="images/sp/title-activity.svg">
+        <img
+          src="images/title-activity-report.svg"
+          alt="ACTIVITY REPORT"
+          class="section-title-svg"
+        >
+      </picture>
 
       <div class="activity-report-card">
         <!-- 左: 写真2枚 -->
@@ -124,7 +128,10 @@
   <!-- SPONSOR -->
   <section class="section" style="padding-top:60px; padding-bottom:60px;">
     <div class="container">
-      <img src="images/title-sponsor.svg" alt="SPONSOR" class="section-title-svg">
+      <picture class="swap">
+        <source media="(max-width: 768px)" srcset="images/sp/title-sponsor.svg">
+        <img src="images/title-sponsor.svg" alt="SPONSOR" class="section-title-svg">
+      </picture>
       <ul class="sponsor-flex">
         <li>株式会社セイワ工業</li>
         <li>ここいの株式会社</li>
@@ -137,7 +144,10 @@
   <!-- PARTNER -->
   <section class="section" style="padding-top:60px; padding-bottom:60px;">
     <div class="container">
-      <img src="images/title-partner.svg" alt="PARTNER" class="section-title-svg">
+      <picture class="swap">
+        <source media="(max-width: 768px)" srcset="images/sp/title-partner.svg">
+        <img src="images/title-partner.svg" alt="PARTNER" class="section-title-svg">
+      </picture>
       <ul class="partner-flex">
         <li>株式会社北斗</li>
         <li>株式会社MIYOSHI</li>
@@ -152,7 +162,10 @@
   <!-- 支援金募集要項 -->
   <section class="section" id="donate" style="padding-top:60px; padding-bottom:60px;">
     <div class="container">
-      <img src="images/title-donate.svg" alt="支援金募集要項" class="section-title-svg">
+      <picture class="swap">
+        <source media="(max-width: 768px)" srcset="images/sp/title-donate.svg">
+        <img src="images/title-donate.svg" alt="支援金募集要項" class="section-title-svg">
+      </picture>
       <p class="donate-body">
         わたしたち認定NPO法人五条クラブは、世界の子どもたちのために教育と<br>
         スポーツの環境を整備して、将来を担える若者の育成を目標としています。<br>

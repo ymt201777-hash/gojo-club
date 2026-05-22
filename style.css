@@ -39,6 +39,8 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 52px;
   background: transparent;
 }
+/* PC/SP差し替え用picture（自身はボックスを生成せず、中のimgが従来通りに振る舞う） */
+picture.swap { display: contents; }
 
 /* CSSボタン */
 .btn {
@@ -82,10 +84,10 @@ img { max-width: 100%; height: auto; display: block; }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-.sp-drawer { display: none; flex-direction: column; background: #fff; border-top: 1px solid #e8e8e8; }
+.sp-drawer { display: none; flex-direction: column; background: #fff; border-top: 1px solid #e8e8e8; padding: 24px 28px 48px; }
 .sp-drawer.open { display: flex; }
-.sp-drawer a { padding: 16px 24px; border-bottom: 1px solid #eee; font-size: 0.95rem; font-weight: 500; }
-.sp-drawer a:hover { background: #f9f9f9; }
+.sp-drawer a { padding: 14px 4px; font-size: 1.9rem; font-weight: 500; text-align: right; letter-spacing: 0.06em; line-height: 1.35; }
+.sp-drawer a:hover { color: var(--primary); }
 
 /* HERO */
 .hero { width: 100%; overflow: hidden; line-height: 0; }
@@ -123,7 +125,10 @@ img { max-width: 100%; height: auto; display: block; }
 .contact-buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
 
 /* FOOTER */
-.site-footer { padding: 28px; text-align: center; font-size: 0.78rem; color: #888; border-top: 1px solid #e8e8e8; }
+/* フッター直前のセクションの下余白をなくす（全ページ共通） */
+.section:has(+ .site-footer),
+article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
+.site-footer { padding: 150px 28px; text-align: center; font-size: 13.5px; color: var(--text); font-weight: 500; }
 
 /* 活動報告一覧 */
 .page-accent { height: 4px; background: var(--primary); }
@@ -138,13 +143,22 @@ img { max-width: 100%; height: auto; display: block; }
 .report-card-npo span { color: #fff; font-size: 1.3rem; font-weight: 700; text-align: center; line-height: 1.7; }
 
 /* 活動報告詳細 */
-.detail-eyecatch { width: 100%; max-height: 440px; object-fit: cover; }
-.detail-date  { font-size: 0.85rem; color: var(--text-mid); letter-spacing: 0.08em; margin-bottom: 10px; }
-.detail-title { font-size: 1.6rem; font-weight: 700; line-height: 1.55; margin-bottom: 40px; padding-bottom: 28px; border-bottom: 1px solid #e0e0e0; }
-.detail-body  { max-width: 720px; margin: 0 auto; }
+/* トップ画を中央寄せし、その表示幅(--eyecatch-w)にタイトル・本文の列をそろえる */
+.detail-eyecatch { display: flex; justify-content: center; width: fit-content; max-width: 100%; margin: 0 auto; }
+.detail-eyecatch img { display: block; height: 520px; width: auto; max-width: 100%; }
+.detail-eyecatch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; width: 100%; max-width: 900px; }
+.detail-eyecatch-grid img { height: auto; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.detail-col { max-width: var(--eyecatch-w, 1040px); margin: 0 auto; }
+.detail-head { padding-top: 56px; }
+.detail-date  { font-size: 14.6px; color: var(--text-mid); letter-spacing: 0.08em; white-space: nowrap; flex-shrink: 0; }
+.detail-head-row { display: flex; justify-content: flex-start; align-items: baseline; gap: 16px; margin-bottom: 36px; }
+.detail-title { font-size: 31.6px; font-weight: 500; line-height: 1.55; margin-bottom: 0; }
+.detail-body  { margin: 36px 0 0; }
 .detail-body p { margin-bottom: 1.6em; font-size: 1.05rem; line-height: 1.95; color: #333; }
 .detail-body h3 { font-size: 1.1rem; font-weight: 700; margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
-.detail-body img { width: 100%; margin: 28px 0; }
+.detail-body img { display: block; max-width: 100%; max-height: 600px; width: auto; height: auto; margin: 28px auto; }
+.detail-img-row { display: flex; gap: 16px; margin: 28px 0; justify-content: center; align-items: flex-start; flex-wrap: wrap; }
+.detail-img-row img { max-width: calc(50% - 8px); max-height: 480px; width: auto; height: auto; margin: 0; }
 .detail-body ol, .detail-body ul.support-list { padding-left: 1.4em; margin-bottom: 1.4em; font-size: 1.05rem; line-height: 1.9; color: #333; }
 .detail-nav { display: flex; justify-content: space-between; align-items: center; padding: 40px 0; margin-top: 60px; border-top: 1px solid #e0e0e0; }
 .detail-nav a { font-size: 0.9rem; color: var(--text-mid); display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
@@ -153,21 +167,21 @@ img { max-width: 100%; height: auto; display: block; }
 .detail-nav .next::after  { content: '→'; }
 
 /* STAFF */
-.rep-section { padding: 72px 0; border-bottom: 1px solid #e8e8e8; }
-.rep-inner   { display: grid; grid-template-columns: 2fr 3fr; gap: 64px; align-items: start; }
+.rep-section { padding: 72px 0; }
+.rep-inner   { display: grid; grid-template-columns: 2fr 3fr; gap: 64px; align-items: center; max-width: 1020px; margin: 0 auto; }
 .rep-img     { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top center; }
 .rep-label   { font-size: 0.88rem; color: var(--text-mid); margin-bottom: 6px; }
-.rep-name    { font-size: 2.2rem; font-weight: 700; letter-spacing: 0.08em; margin-bottom: 28px; }
+.rep-name    { font-size: 2.2rem; font-weight: 500; letter-spacing: 0.08em; margin-bottom: 28px; }
 .rep-bio     { font-size: 1.05rem; line-height: 1.95; color: #333; }
-.staff-grid  { display: grid; grid-template-columns: repeat(2, 1fr); gap: 52px 48px; }
-.staff-card  { display: grid; grid-template-columns: 160px 1fr; gap: 20px; align-items: start; }
-.staff-card-img  { width: 160px; aspect-ratio: 3 / 4; object-fit: cover; object-position: top center; }
-.staff-card-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; letter-spacing: 0.04em; }
-.staff-card-role { font-size: 0.82rem; line-height: 1.75; color: #444; }
-.officers-section { padding: 56px 0 0; text-align: center; }
-.officers-heading { font-size: 1.2rem; font-weight: 700; margin-bottom: 32px; }
-.officers-list    { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 48px; }
-.officers-list li { font-size: 0.92rem; color: #333; }
+.staff-grid  { display: grid; grid-template-columns: repeat(2, 1fr); gap: 52px 80px; max-width: 1020px; margin: 0 auto; }
+.staff-card  { display: grid; grid-template-columns: 200px 1fr; gap: 20px; align-items: start; }
+.staff-card-img  { width: 200px; aspect-ratio: 1 / 1; object-fit: cover; object-position: top center; }
+.staff-card-name { font-size: 1.25rem; font-weight: 500; margin-bottom: 8px; letter-spacing: 0.04em; }
+.staff-card-role { font-size: 13.8px; line-height: 1.75; color: #444; }
+.officers-section { padding: 56px 0 0; text-align: center; max-width: 1020px; margin: 0 auto; }
+.officers-heading { font-size: 25px; font-weight: 500; margin-bottom: 32px; }
+.officers-list    { display: grid; grid-template-columns: repeat(2, auto); justify-content: center; gap: 12px 64px; }
+.officers-list li { font-size: 17px; color: #333; }
 .officer-role     { color: var(--text-mid); margin-right: 6px; }
 
 /* ============================================================ SP ============================================================ */
@@ -179,22 +193,51 @@ img { max-width: 100%; height: auto; display: block; }
   .header-nav    { display: none; }
   .header-support-sp { display: block; }
   .nav-toggle    { display: flex; }
-  .hero-img      { height: 220px; }
+  .hero-img      { height: 260px; }
   .intro         { padding: 52px 0; }
-  .intro p       { font-size: 0.9rem; line-height: 2.1; }
+  .intro p       { font-size: 0.95rem; line-height: 2.2; }
+  .intro p br    { display: none; }               /* SPは自然に折り返す */
   .section-title-svg { margin-bottom: 32px; }
-  .activity-report-card { grid-template-columns: 1fr; gap: 24px; }
-  .donate-body  { font-size: 0.88rem; }
+  .activity-report-card { grid-template-columns: 1fr; gap: 20px; }
+  .sponsor-flex, .partner-flex { grid-template-columns: 1fr; gap: 6px; max-width: 100%; }
+  .donate-body  { font-size: 0.92rem; text-align: justify; max-width: 100%; }
+  .donate-body br { display: none; }              /* SPは自然に折り返す */
   .contact-buttons { flex-direction: column; align-items: center; }
-  .report-grid  { grid-template-columns: 1fr; gap: 36px; }
-  .detail-title { font-size: 1.2rem; }
-  .detail-nav   { flex-direction: column; gap: 16px; align-items: flex-start; }
-  .rep-inner    { grid-template-columns: 1fr; gap: 28px; }
-  .rep-img      { aspect-ratio: 4 / 3; }
-  .rep-name     { font-size: 1.7rem; }
-  .staff-grid   { grid-template-columns: 1fr; gap: 32px; }
-  .staff-card   { grid-template-columns: 120px 1fr; gap: 16px; }
-  .staff-card-img { width: 120px; }
-  .officers-list { flex-direction: column; align-items: center; gap: 8px; }
+  .contact-org { font-size: 20px; }
+  .report-grid  { grid-template-columns: 1fr; gap: 40px; }
+  .report-card-img, .report-card-npo { aspect-ratio: 2 / 1; }
+  .report-card-date  { font-size: 0.8rem; margin-bottom: 8px; }
+  .report-card-title { font-size: 1.05rem; line-height: 1.6; min-height: 0; margin-top: 4px; }
+  .report-card-npo span { font-size: 1.1rem; }
+  /* 活動報告詳細 SP：トップ画は幅いっぱい・高さautoで比率維持。本文も全幅。 */
+  .detail-eyecatch { width: 100%; }
+  .detail-eyecatch img { height: auto; width: 100%; }
+  .detail-eyecatch-grid { max-width: 100%; gap: 4px; }
+  .detail-col   { max-width: 100%; }
+  .detail-head  { padding-top: 28px; }
+  .detail-head-row { flex-wrap: wrap; gap: 4px 12px; margin-bottom: 22px; }
+  .detail-title { font-size: 1.4rem; line-height: 1.5; }
+  .detail-date  { font-size: 13px; }
+  .detail-body  { margin-top: 24px; }
+  .detail-body p,
+  .detail-body ol,
+  .detail-body ul.support-list { font-size: 0.95rem; line-height: 1.9; }
+  .detail-body h3 { font-size: 1.05rem; margin: 32px 0 14px; }
+  .detail-body img { max-height: none; }
+  .detail-nav   { flex-direction: row; justify-content: space-between; gap: 12px; padding: 28px 0; margin-top: 40px; }
+  .detail-nav a { font-size: 0.85rem; }
+  /* STAFF SP：代表は写真→テキストを縦積み・中央寄せ。スタッフは写真上・中央寄せ。 */
+  .rep-inner    { grid-template-columns: 1fr; gap: 24px; text-align: center; }
+  .rep-img      { aspect-ratio: auto; height: auto; max-width: 78%; margin: 0 auto; }
+  .rep-label    { font-size: 0.85rem; }
+  .rep-name     { font-size: 1.7rem; margin-bottom: 20px; }
+  .rep-bio      { font-size: 0.95rem; text-align: justify; }
+  .staff-grid   { grid-template-columns: 1fr; gap: 40px; }
+  .staff-card   { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+  .staff-card-img { width: 200px; max-width: 62%; }
+  .staff-card-name { font-size: 1.2rem; }
+  .staff-card-role { font-size: 0.85rem; }
+  .officers-heading { font-size: 22px; }
+  .officers-list { grid-template-columns: 1fr; gap: 8px; }
   .btn-svg img  { height: 40px; }
 }

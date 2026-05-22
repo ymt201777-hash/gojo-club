@@ -1,0 +1,11 @@
+# エディタ・OS
+.vscode/
+.claude/
+desktop.ini
+.DS_Store
+
+# 作業用・素材アーカイブ（サイトには不要）
+sp-assets/
+HelloFont.win.zkdetail.zip
+スマホver_素材一式.zip
+スマホverデザイン.pdf
