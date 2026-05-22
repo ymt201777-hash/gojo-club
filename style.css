@@ -252,4 +252,6 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .officers-heading { font-size: 22px; }
   .officers-list { grid-template-columns: 1fr; gap: 8px; }
   .btn-svg img  { height: 40px; }
+  .btn { font-size: 18px; }   /* CSSテキストボタンの文字をCONTACTのSVGボタンに合わせて統一 */
+  .header-support-sp { padding: 6px 18px; }   /* ヘッダー内なので高さは抑える */
 }
