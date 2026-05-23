@@ -206,9 +206,9 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .sp-br         { display: inline; }              /* SPはご指定の改行位置で表示 */
   .section-title-svg { margin-bottom: 32px; }
   .activity-report-card { grid-template-columns: 1fr; gap: 20px; }
-  .activity-report-text h3 { font-size: 22px; line-height: 1.6; text-align: left; margin-bottom: 1.6em; }
-  .activity-report-text p  { font-size: 17px; line-height: 1.85; text-align: left; }
-  .activity-report-text .link-note { font-size: 22px; line-height: 1.6; text-align: left; }
+  .activity-report-text h3 { font-size: 22px; line-height: 1.6; text-align: left; margin-bottom: 0.6em; }   /* 上下余白を詰める(1.6em→0.6em) */
+  .activity-report-text p  { font-size: 17px; line-height: 2.775; text-align: left; margin-bottom: 0; }   /* 行間1.5倍(1.85→2.775)、次行への隙間を消す */
+  .activity-report-text .link-note { font-size: 17px; line-height: 2.775; text-align: left; margin-top: 0; }   /* 上の本文と同じ17px/同じ行間で連続表示、隙間なし */
   .activity-report-text .btn-svg { align-self: flex-start; }
   .sponsor-flex, .partner-flex { grid-template-columns: 1fr; gap: 6px; max-width: 100%; }
   .sponsor-flex li, .partner-flex li { font-size: 17px; }   /* SPは17pxに統一 */
