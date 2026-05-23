@@ -188,6 +188,14 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .officers-list li { font-size: 17px; color: var(--text); }
 .officer-role     { color: var(--text); margin-right: 6px; }
 
+/* ============================================================ 狭めPC（タブレット〜小型ノート） ============================================================ */
+@media (min-width: 769px) and (max-width: 960px) {
+  .header-inner { padding: 14px 20px; }       /* ロゴ↔ナビの余裕を確保 */
+  .site-logo-img { height: 22px; }            /* ロゴも少し縮小して幅を稼ぐ(318→約269px) */
+  .header-nav { gap: 12px; }                  /* ボタン間も少し詰める */
+  .btn-svg img { height: 38px; }              /* ボタン自体も少し小さく */
+}
+
 /* ============================================================ SP ============================================================ */
 @media (max-width: 768px) {
   .container  { padding: 0 20px; }
