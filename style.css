@@ -194,7 +194,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .section    { padding: 48px 0; }
   .header-inner { padding: 10px 20px; }
   .site-logo-img { display: none; }
-  .site-logo-sp { display: block; line-height: 0; }   /* SPはヘッダータイトル画像を表示 */
+  .site-logo-sp { display: block; line-height: 0; margin-left: 8px; }   /* SPはヘッダータイトル画像を表示、左側に少し余白 */
   .site-logo-sp img { height: 44px; width: auto; display: block; }
   .logo-l1 { font-size: 1.16em; }                 /* 旧テキスト用（現在は画像になり不使用） */
   .header-support-sp { margin-left: auto; margin-right: 12px; }  /* ハンバーガーのすぐ横へ */
