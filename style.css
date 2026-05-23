@@ -96,7 +96,7 @@ picture.swap { display: contents; }
 
 /* INTRO */
 .intro { padding: 80px 0; text-align: center; }
-.intro p { font-size: 1.05rem; line-height: 2.4; color: var(--text); }
+.intro p { font-size: 1.05rem; line-height: 3.6; color: var(--text); }   /* PC: 行間1.5倍(2.4→3.6) */
 .sp-br { display: none; }   /* SP専用改行（PCでは非表示） */
 
 /* ACTIVITY REPORT (TOP) */
