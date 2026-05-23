@@ -73,7 +73,7 @@ picture.swap { display: contents; }
 .site-logo { display: flex; align-items: center; flex-shrink: 0; }
 .site-logo-img { height: 26px; width: auto; background: transparent; }
 .site-logo-sp { display: none; }
-.header-nav { display: flex; justify-content: space-between; align-items: center; flex: 0 0 40%; }
+.header-nav { display: flex; align-items: center; gap: 20px; }   /* ウィンドウ縮小時もボタン同士の間隔を維持(旧: flex 0 0 40% + space-between だと隙間が消えていた) */
 .header-support-sp { display: none; }
 
 .nav-toggle {
