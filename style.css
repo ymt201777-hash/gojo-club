@@ -214,7 +214,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .sponsor-flex li, .partner-flex li { font-size: 17px; }   /* SPは17pxに統一 */
   .sponsor-multi { display: flex; justify-content: center; flex-wrap: wrap; gap: 2px 12px; }
   .sponsor-multi span { display: inline; font-size: 17px; }   /* SPは3社横並び・17px */
-  .donate-body  { font-size: 17px; text-align: justify; max-width: 100%; }
+  .donate-body  { font-size: 17px; text-align: justify; max-width: 100%; padding: 0 12px; }   /* SPは本文の左右に少し余白 */
   .donate-body br { display: none; }              /* SPは自然に折り返す */
   .contact-buttons { flex-direction: column; align-items: center; }
   .contact-org { font-size: 20px; }
