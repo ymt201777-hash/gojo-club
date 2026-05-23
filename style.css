@@ -247,7 +247,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   /* STAFF SP：代表は写真→テキストを縦積み・中央寄せ。スタッフは写真上・中央寄せ。 */
   .rep-inner    { grid-template-columns: 1fr; gap: 36px; text-align: center; }   /* 写真↔テキスト間(肩書の上)1.5倍 */
   .rep-img      { aspect-ratio: auto; height: auto; max-width: 100%; margin: 0 auto; }   /* 説明文と同じ幅まで広げる */
-  .rep-label    { font-size: 17px; margin-bottom: 9px; }     /* 肩書/下余白1.5倍(6→9px) */
+  .rep-label    { font-size: 17px; margin-bottom: 30px; }    /* 肩書/下余白 */
   .rep-name     { font-size: 22px; margin-bottom: 30px; }    /* 名前/下余白1.5倍(20→30px) */
   .rep-bio      { font-size: 17px; line-height: 2.925; text-align: justify; }   /* 説明文/行間1.5倍(1.95→2.925) */
   .staff-grid   { grid-template-columns: 1fr; gap: 40px; }
