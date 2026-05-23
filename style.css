@@ -206,6 +206,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .intro p       { font-size: 17px; line-height: 3.3; }   /* SP +2px(15.2px→17px) */
   .sp-br         { display: inline; }              /* SPはご指定の改行位置で表示 */
   .section-title-svg { margin-bottom: 32px; }
+  .section-title-svg[alt="CONTACT"] { margin-bottom: 48px; }   /* CONTACTタイトルだけ少し広く */
   .activity-report-card { grid-template-columns: 1fr; gap: 20px; }
   .activity-report-text h3 { font-size: 22px; line-height: 1.6; text-align: left; margin-bottom: 0.6em; }   /* 上下余白を詰める(1.6em→0.6em) */
   .activity-report-text p  { font-size: 17px; line-height: 2.775; text-align: left; margin-bottom: 0; }   /* 行間1.5倍(1.85→2.775)、次行への隙間を消す */
