@@ -201,8 +201,8 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .header-support-sp { display: block; }
   .nav-toggle    { display: flex; }
   .hero-img      { height: 100vh; height: 100svh; }
-  .intro         { padding: 94px 0; }   /* SPは52px→94px(約1.8倍) */
-  .intro p       { font-size: 0.95rem; line-height: 3.3; }   /* SPは2.2→3.3(1.5倍) */
+  .intro         { padding: 110px 0; }   /* SPは上下余白をもう少し広く */
+  .intro p       { font-size: 17px; line-height: 3.3; }   /* SP +2px(15.2px→17px) */
   .sp-br         { display: inline; }              /* SPはご指定の改行位置で表示 */
   .section-title-svg { margin-bottom: 32px; }
   .activity-report-card { grid-template-columns: 1fr; gap: 20px; }
