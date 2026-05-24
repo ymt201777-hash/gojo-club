@@ -112,10 +112,10 @@ picture.swap { display: contents; }
 
 /* SPONSOR / PARTNER */
 .sponsor-flex { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px 48px; max-width: 900px; margin: 0 auto; }
-.sponsor-flex li { font-size: 0.95rem; text-align: center; }
+.sponsor-flex li { font-size: 1.05rem; text-align: center; }
 .sponsor-multi span { display: block; }   /* PCは縦積み（従来通り） */
 .partner-flex { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px 48px; max-width: 900px; margin: 0 auto; }
-.partner-flex li { font-size: 0.95rem; text-align: center; }
+.partner-flex li { font-size: 1.05rem; text-align: center; }
 
 /* DONATE */
 .donate-body { max-width: 700px; margin: 0 auto 36px; font-size: 1.05rem; line-height: 1.95; color: var(--text); text-align: center; }
