@@ -223,7 +223,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .activity-report-text .btn-svg { align-self: flex-start; }
   .sponsor-flex, .partner-flex { grid-template-columns: 1fr; gap: 6px; max-width: 100%; }
   .sponsor-flex li, .partner-flex li { font-size: 17px; }   /* SPは17pxに統一 */
-  .sponsor-multi { display: flex; justify-content: center; flex-wrap: wrap; gap: 2px 12px; }
+  .sponsor-multi { display: flex; justify-content: center; flex-wrap: wrap; gap: 2px 8px; }   /* SP: 列間を半角スペース相当(12→8px)に */
   .sponsor-multi span { display: inline; font-size: 17px; line-height: 1.8; }   /* SPは3社横並び・17px、行間は従来値1.8を維持 */
   .donate-body  { font-size: 17px; line-height: 1.95; text-align: justify; max-width: 100%; padding: 0 12px; }   /* SPは本文の左右に少し余白、行間は従来値1.95を維持(PC変更から保護) */
   .donate-body br { display: none; }              /* SPは自然に折り返す */
