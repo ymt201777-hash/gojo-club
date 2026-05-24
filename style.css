@@ -177,15 +177,15 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .rep-label   { font-size: 1.575rem; color: var(--text); margin-bottom: 6px; }   /* PC: 紹介文(1.05rem)の1.5倍 */
 .rep-name    { font-size: 2.86rem; font-weight: 500; letter-spacing: 0.08em; margin-bottom: 28px; }   /* PC: 現状2.2remの1.3倍 */
 .rep-bio     { font-size: 1.05rem; line-height: 1.95; color: var(--text); }
-.staff-grid  { display: grid; grid-template-columns: repeat(2, 1fr); gap: 52px 80px; max-width: 1020px; margin: 0 auto; }   /* PC: rep-inner(1020px)と同幅、列gap 80pxで右列を右にシフト */
-.staff-card  { display: grid; grid-template-columns: 155px 1fr; gap: 16px; align-items: start; }   /* PC: 画像 155px(当初145→拡大、列gap復元の制約下) */
-.staff-card-img  { width: 155px; aspect-ratio: 1 / 1; object-fit: cover; object-position: top center; }
-.staff-card-name { font-size: clamp(1.125rem, 1.875vw, 1.5rem); font-weight: 500; margin-bottom: 8px; letter-spacing: 0.04em; }   /* PC: 1280px時=1.5rem(=24px)、961px時=1.125rem(=18px)。全員1行表示 */
+.staff-grid  { display: grid; grid-template-columns: repeat(2, 1fr); gap: 52px 100px; max-width: 1020px; margin: 0 auto; }   /* PC: 列gap 100px(右列を右にシフト) */
+.staff-card  { display: grid; grid-template-columns: 165px 1fr; gap: 16px; align-items: start; }   /* PC: 画像 165px */
+.staff-card-img  { width: 165px; aspect-ratio: 1 / 1; object-fit: cover; object-position: top center; }
+.staff-card-name { font-size: clamp(1.125rem, calc(1.38vw + 4.74px), 1.4rem); font-weight: 500; margin-bottom: 8px; letter-spacing: 0.04em; }   /* PC: 1280px時=1.4rem(=22.4px)、961px時=1.125rem。テキスト領域279pxで全員1行 */
 .staff-card-role { font-size: 1.05rem; line-height: 1.75; color: var(--text); }                            /* PC: 代表の紹介文(rep-bio)と同サイズ */
 .officers-section { padding: 144px 0 0; text-align: center; max-width: 1020px; margin: 0 auto; }   /* PC: STAFFカード↔役員の余白を rep_section→STAFF title と同じ144pxに */
 .officers-heading { font-size: 2.86rem; font-weight: 500; margin-bottom: 32px; }                   /* PC: rep-nameと同サイズ */
 .officers-list    { display: grid; grid-template-columns: repeat(2, auto); justify-content: center; gap: 12px 64px; }
-.officers-list li { font-size: clamp(1.125rem, 1.875vw, 1.5rem); color: var(--text); }   /* PC: staff-card-nameと同サイズ */
+.officers-list li { font-size: clamp(1.125rem, calc(1.38vw + 4.74px), 1.4rem); color: var(--text); }   /* PC: staff-card-nameと同サイズ */
 .officer-role     { color: var(--text); margin-right: 6px; }
 
 /* ============================================================ 狭めPC（タブレット〜小型ノート） ============================================================ */
