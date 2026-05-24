@@ -187,8 +187,9 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .staff-card-role span::before { content: "・"; }   /* PC: 肩書各行の頭に「・」 */
 .officers-section { padding: 144px 0 0; text-align: center; max-width: 1020px; margin: 0 auto; }   /* PC: STAFFカード↔役員の余白を rep_section→STAFF title と同じ144pxに */
 .officers-heading { font-size: 2.86rem; font-weight: 500; margin-bottom: 32px; }                   /* PC: rep-nameと同サイズ */
-.officers-list    { display: grid; grid-template-columns: repeat(2, auto); justify-content: center; gap: 12px 64px; }   /* PC: 2列×2行のセル配置 */
-.officers-list li { font-size: clamp(1rem, calc(2.88vw - 11.66px), 1.575rem); color: var(--text); display: grid; grid-template-columns: 4.5em auto; column-gap: 1em; }   /* PC: SP同方式。肩書列4.5em固定+gap 1emで、各ペア内で肩書/名前の頭が両方とも縦に揃う */
+.officers-list    { display: grid; grid-template-columns: max-content auto max-content auto; column-gap: 1em; row-gap: 12px; justify-content: center; font-size: clamp(1rem, calc(2.88vw - 11.66px), 1.575rem); color: var(--text); }   /* PC: 4列を親grid直下で管理。各列max-content/autoで肩書列・名前列の頭が必ず縦に揃う */
+.officers-list li { display: contents; }   /* PC: liの箱を消して、span(肩書)とテキスト(名前)を親grid直下の独立セルに配置 */
+.officers-list li:nth-child(2n) .officer-role { padding-left: 80px; }   /* PC: 2番目・4番目のli(右ペア)の肩書左にpadding=ペア間の余白 */
 .officer-role     { color: var(--text); margin-right: 0; }
 
 /* ============================================================ 狭めPC（タブレット〜小型ノート） ============================================================ */
@@ -276,6 +277,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   /* 役員: ブロックは中央配置のまま、各行を左揃え。肩書列を固定幅にして肩書・名前の開始位置を揃える */
   .officers-list { grid-template-columns: 1fr; gap: 8px; width: fit-content; margin: 0 auto; text-align: left; }
   .officers-list li { font-size: 22px; display: grid; grid-template-columns: 4.5em auto; column-gap: 12px; }   /* 名前22px */
+  .officers-list li:nth-child(2n) .officer-role { padding-left: 0; }   /* SP: PC側のペア間padding(80px)を打ち消す */
   .officer-role { font-size: 22px; margin-right: 0; }   /* 肩書22px・固定幅列で開始位置を揃える */
   .btn-svg img  { height: 40px; }
   .btn { font-size: 18px; }   /* CSSテキストボタンの文字をCONTACTのSVGボタンに合わせて統一 */
