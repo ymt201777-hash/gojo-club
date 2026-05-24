@@ -184,6 +184,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .staff-card-img  { width: 190px; aspect-ratio: 1 / 1; object-fit: cover; object-position: top center; }
 .staff-card-name { font-size: clamp(1rem, calc(2.88vw - 11.66px), 1.575rem); font-weight: 500; margin-bottom: 8px; letter-spacing: 0.04em; }   /* PC: 1280px時=1.575rem(rep-label同)、961px時=1.0rem */
 .staff-card-role { font-size: 1.05rem; line-height: 1.75; color: var(--text); }                            /* PC: 代表の紹介文(rep-bio)と同サイズ */
+.staff-card-role span::before { content: "・"; }   /* PC: 肩書各行の頭に「・」 */
 .officers-section { padding: 144px 0 0; text-align: center; max-width: 1020px; margin: 0 auto; }   /* PC: STAFFカード↔役員の余白を rep_section→STAFF title と同じ144pxに */
 .officers-heading { font-size: 2.86rem; font-weight: 500; margin-bottom: 32px; }                   /* PC: rep-nameと同サイズ */
 .officers-list    { display: grid; grid-template-columns: repeat(2, auto); justify-content: center; gap: 12px 64px; }
