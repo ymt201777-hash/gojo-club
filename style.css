@@ -187,9 +187,9 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .staff-card-role span::before { content: "・"; }   /* PC: 肩書各行の頭に「・」 */
 .officers-section { padding: 144px 0 0; text-align: center; max-width: 1020px; margin: 0 auto; }   /* PC: STAFFカード↔役員の余白を rep_section→STAFF title と同じ144pxに */
 .officers-heading { font-size: 2.86rem; font-weight: 500; margin-bottom: 32px; }                   /* PC: rep-nameと同サイズ */
-.officers-list    { display: grid; grid-template-columns: repeat(2, auto); justify-content: center; gap: 12px 64px; }   /* PC: 2列×2行のセル配置 */
-.officers-list li { font-size: clamp(1rem, calc(2.88vw - 11.66px), 1.575rem); color: var(--text); display: grid; grid-template-columns: 5em auto; column-gap: 1em; }   /* PC: SPと同方式。各liを内側グリッド化、肩書列5em固定で名前の頭が必ず揃う */
-.officer-role     { color: var(--text); margin-right: 0; }
+.officers-list    { display: grid; grid-template-columns: repeat(2, auto); justify-content: center; gap: 12px 64px; }   /* PC: 2列×2行。各列max-contentで各セル先頭(肩書の頭)が縦に揃う */
+.officers-list li { font-size: clamp(1rem, calc(2.88vw - 11.66px), 1.575rem); color: var(--text); }   /* PC: セル内は肩書+名前がインライン。名前位置は行ごとに自然に変動 */
+.officer-role     { color: var(--text); margin-right: 1em; }   /* PC: 肩書↔名前間を全角(1em) */
 
 /* ============================================================ 狭めPC（タブレット〜小型ノート） ============================================================ */
 @media (min-width: 769px) and (max-width: 960px) {
