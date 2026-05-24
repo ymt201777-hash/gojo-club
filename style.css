@@ -187,7 +187,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .staff-card-role span::before { content: "・"; }   /* PC: 肩書各行の頭に「・」 */
 .officers-section { padding: 144px 0 0; text-align: center; max-width: 1020px; margin: 0 auto; }   /* PC: STAFFカード↔役員の余白を rep_section→STAFF title と同じ144pxに */
 .officers-heading { font-size: 2.86rem; font-weight: 500; margin-bottom: 32px; }                   /* PC: rep-nameと同サイズ */
-.officers-list    { display: grid; grid-template-columns: max-content auto max-content auto; column-gap: 1em; row-gap: 12px; justify-content: center; font-size: clamp(1rem, calc(2.88vw - 11.66px), 1.575rem); color: var(--text); }   /* PC: 4列を親grid直下で管理。各列max-content/autoで肩書列・名前列の頭が必ず縦に揃う */
+.officers-list    { display: grid; grid-template-columns: max-content auto max-content auto; column-gap: 1em; row-gap: 12px; justify-content: center; font-size: clamp(1rem, calc(2.88vw - 11.66px), 1.575rem); color: var(--text); text-align: left; }   /* PC: 4列を親grid直下で管理。各列max-content/autoで肩書列・名前列の頭が必ず縦に揃う。officers-sectionのtext-align:centerを左揃えで上書き(これがないと短い項目がセル内で中央寄せになり頭が揃わない) */
 .officers-list li { display: contents; }   /* PC: liの箱を消して、span(肩書)とテキスト(名前)を親grid直下の独立セルに配置 */
 .officers-list li:nth-child(2n) .officer-role { padding-left: 80px; }   /* PC: 2番目・4番目のli(右ペア)の肩書左にpadding=ペア間の余白 */
 .officer-role     { color: var(--text); margin-right: 0; }
