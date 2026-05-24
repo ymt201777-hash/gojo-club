@@ -29,7 +29,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* LAYOUT */
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 40px; }
-.section { padding: 72px 0; }
+.section { padding: 92px 0 72px; }   /* PC: 上余白を+20px */
 
 /* SVGセクションタイトル（デザイナー提供） */
 .section-title-svg {
@@ -95,7 +95,7 @@ picture.swap { display: contents; }
 .hero-img { width: 100%; height: 750px; object-fit: cover; object-position: center; }
 
 /* INTRO */
-.intro { padding: 80px 0; text-align: center; }
+.intro { padding: 100px 0; text-align: center; }   /* PC: 上下対称100/100(上+20) */
 .intro p { font-size: 1.05rem; line-height: 3.6; color: var(--text); }   /* PC: 行間1.5倍(2.4→3.6) */
 .sp-br { display: none; }   /* SP専用改行（PCでは非表示） */
 
@@ -124,7 +124,8 @@ picture.swap { display: contents; }
 /* CONTACT */
 .contact-section { text-align: center; }
 .contact-org { font-size: 25px; font-weight: 500; margin-bottom: 20px; }
-.contact-org-img { display: none; }   /* PCではテキストを表示、画像は非表示 */
+.contact-org-text { display: none; }   /* PC/SPともテキストは隠して画像で表示 */
+.contact-org-img  { display: inline-block; height: 30px; width: auto; }   /* PC: header logo SVG (SPは22pxに上書き) */
 .contact-address { font-style: normal; font-size: 1.05rem; line-height: 2.1; color: var(--text); margin-bottom: 36px; }
 .contact-buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
 
