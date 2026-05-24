@@ -152,7 +152,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .detail-eyecatch img { display: block; height: 520px; width: auto; max-width: 100%; }
 .detail-eyecatch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; width: 100%; max-width: 900px; }
 .detail-eyecatch-grid img { height: auto; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-.detail-col { max-width: var(--eyecatch-w, 1040px); margin: 0 auto; }
+.detail-col { max-width: 1040px; margin: 0 auto; }   /* PC: タイトル/本文列をtohoku基準の固定幅に(eyecatch依存をやめる) */
 .detail-head { padding-top: 56px; }
 .detail-date  { font-size: 14.6px; color: var(--text); letter-spacing: 0.08em; white-space: nowrap; flex-shrink: 0; }
 .detail-head-row { display: flex; justify-content: flex-start; align-items: baseline; gap: 16px; margin-bottom: 36px; }
