@@ -174,8 +174,8 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .rep-section { padding: 72px 0; }
 .rep-inner   { display: grid; grid-template-columns: 2fr 3fr; gap: 64px; align-items: center; max-width: 1020px; margin: 0 auto; }
 .rep-img     { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top center; }
-.rep-label   { font-size: 0.88rem; color: var(--text); margin-bottom: 6px; }
-.rep-name    { font-size: 2.2rem; font-weight: 500; letter-spacing: 0.08em; margin-bottom: 28px; }
+.rep-label   { font-size: 1.575rem; color: var(--text); margin-bottom: 6px; }   /* PC: 紹介文(1.05rem)の1.5倍 */
+.rep-name    { font-size: 2.86rem; font-weight: 500; letter-spacing: 0.08em; margin-bottom: 28px; }   /* PC: 現状2.2remの1.3倍 */
 .rep-bio     { font-size: 1.05rem; line-height: 1.95; color: var(--text); }
 .staff-grid  { display: grid; grid-template-columns: repeat(2, 1fr); gap: 52px 80px; max-width: 1020px; margin: 0 auto; }
 .staff-card  { display: grid; grid-template-columns: 200px 1fr; gap: 20px; align-items: start; }
