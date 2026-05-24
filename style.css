@@ -212,14 +212,14 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .nav-toggle    { display: flex; }
   .hero-img      { height: 100vh; height: 100svh; }
   .intro         { padding: 110px 0; }   /* SPは上下余白をもう少し広く */
-  .intro p       { font-size: 17px; line-height: 3.3; }   /* SP +2px(15.2px→17px) */
+  .intro p       { font-size: 17px; line-height: 2.8; }   /* SP +2px(15.2px→17px)、行間を少し詰める(3.3→2.8) */
   .sp-br         { display: inline; }              /* SPはご指定の改行位置で表示 */
   .section-title-svg { margin-bottom: 32px; }
   .section-title-svg[alt="CONTACT"] { margin-bottom: 48px; }   /* CONTACTタイトルだけ少し広く */
   .activity-report-card { grid-template-columns: 1fr; gap: 20px; }
   .activity-report-text h3 { font-size: 22px; line-height: 1.6; text-align: left; margin-bottom: 0.6em; }   /* 上下余白を詰める(1.6em→0.6em) */
-  .activity-report-text p  { font-size: 17px; line-height: 2.775; text-align: left; margin-bottom: 0; }   /* 行間1.5倍(1.85→2.775)、次行への隙間を消す */
-  .activity-report-text .link-note { font-size: 17px; line-height: 2.775; text-align: left; margin-top: 0; }   /* 上の本文と同じ17px/同じ行間で連続表示、隙間なし */
+  .activity-report-text p  { font-size: 17px; line-height: 2.3; text-align: left; margin-bottom: 0; }   /* 行間少し詰める(2.775→2.3) */
+  .activity-report-text .link-note { font-size: 17px; line-height: 2.3; text-align: left; margin-top: 0; }   /* 上の本文と同じ17px/同じ行間で連続表示 */
   .activity-report-text .btn-svg { align-self: flex-start; }
   .sponsor-flex, .partner-flex { grid-template-columns: 1fr; gap: 6px; max-width: 100%; }
   .sponsor-flex li, .partner-flex li { font-size: 17px; }   /* SPは17pxに統一 */
@@ -257,10 +257,11 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .rep-inner    { grid-template-columns: 1fr; gap: 36px; text-align: center; }   /* 写真↔テキスト間(肩書の上)1.5倍 */
   .rep-img      { aspect-ratio: auto; height: auto; max-width: 100%; margin: 0 auto; }   /* 説明文と同じ幅まで広げる */
   .rep-label    { font-size: 17px; margin-bottom: 30px; }    /* 肩書/下余白 */
-  .rep-name     { font-size: 22px; margin-bottom: 30px; }    /* 名前/下余白1.5倍(20→30px) */
-  .rep-bio      { font-size: 17px; line-height: 2.925; text-align: justify; }   /* 説明文/行間1.5倍(1.95→2.925) */
+  .rep-name     { font-size: 26px; margin-bottom: 30px; }    /* 名前を少し大きく(22→26px) */
+  .rep-bio      { font-size: 17px; line-height: 2.4; text-align: justify; }   /* 説明文行間を少し詰める(2.925→2.4) */
   .staff-grid   { grid-template-columns: 1fr; gap: 40px; }
-  .staff-card   { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+  .staff-card   { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; margin-right: 0; }   /* SP: PC側margin-right負の影響を打ち消し中央揃え復活 */
+  .staff-card:nth-child(odd) { margin-right: 0; }   /* SP: PC側の左列追加overflowも打ち消し */
   .staff-card-img { width: 200px; max-width: 62%; }
   .staff-card-name { font-size: 22px; }   /* 名前 */
   .staff-card-role { font-size: 17px; }    /* 肩書 */
