@@ -185,7 +185,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .staff-card-name { font-size: clamp(1rem, calc(2.88vw - 11.66px), 1.575rem); font-weight: 500; margin-bottom: 8px; letter-spacing: 0.04em; }   /* PC: 1280px時=1.575rem(rep-label同)、961px時=1.0rem */
 .staff-card-role { font-size: 1.05rem; line-height: 1.75; color: var(--text); }                            /* PC: 代表の紹介文(rep-bio)と同サイズ */
 .staff-card-role span::before { content: "・"; }   /* PC: 肩書各行の頭に「・」 */
-.staff-card-role .role-cont::before { content: none; }   /* PC/SP共通: 同じ肩書の継続行は「・」を出さない */
+.staff-card-role .role-cont::before { content: "・"; visibility: hidden; }   /* PC: 継続行は「・」を不可視化して空間だけ残し、頭文字を上の行(サ/グ)と揃える */
 .staff-card-role .role-nowrap { white-space: nowrap; font-size: 0.95em; letter-spacing: -0.02em; }   /* PC/SP共通: 長めの肩書を強制1行表示(微縮で確実に収める) */
 .officers-section { padding: 144px 0 0; text-align: center; max-width: 1020px; margin: 0 auto; }   /* PC: STAFFカード↔役員の余白を rep_section→STAFF title と同じ144pxに */
 .officers-heading { font-size: 2.86rem; font-weight: 500; margin-bottom: 32px; }                   /* PC: rep-nameと同サイズ */
@@ -275,6 +275,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .staff-card-name { font-size: 22px; }   /* 名前 */
   .staff-card-role { font-size: 17px; }    /* 肩書 */
   .staff-card-role span::before { content: "・"; }   /* SP: 肩書各行の頭に「・」 */
+  .staff-card-role .role-cont::before { content: none; }   /* SP: 継続行は「・」も空間も無し(PC側のvisibility:hiddenを打ち消す) */
   .officers-heading { font-size: 22px; }
   /* 役員: ブロックは中央配置のまま、各行を左揃え。肩書列を固定幅にして肩書・名前の開始位置を揃える */
   .officers-list { grid-template-columns: 1fr; gap: 8px; width: fit-content; margin: 0 auto; text-align: left; }
