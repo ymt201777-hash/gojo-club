@@ -237,9 +237,11 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .report-card-title { font-size: 1.05rem; line-height: 1.6; min-height: 0; margin-top: 4px; }
   .report-card-npo span { font-size: 1.1rem; }
   /* 活動報告詳細 SP：トップ画は幅いっぱい・高さautoで比率維持。本文も全幅。 */
-  .detail-eyecatch { width: 100%; }
+  .detail-eyecatch { width: 100%; flex-direction: column; gap: 6px; }   /* SP: 複数画像も縦並び */
   .detail-eyecatch img { height: auto; width: 100%; }
-  .detail-eyecatch-grid { max-width: 100%; gap: 4px; }
+  .detail-eyecatch-grid { max-width: 100%; gap: 6px; grid-template-columns: 1fr; }   /* SP: グリッド型も1列縦並び */
+  .detail-img-row { flex-direction: column; gap: 12px; }   /* SP: 本文内の横並び画像も縦並び */
+  .detail-img-row img { max-width: 100%; max-height: none; }
   .detail-col   { max-width: 100%; padding-inline: 32px; }   /* SP: トップのdonate-bodyと同じ左右余白(container20+本文12) */
   .detail-body img,
   .detail-body .detail-img-row { margin-inline: -32px; max-width: calc(100% + 64px); width: calc(100% + 64px); }   /* SP: 画像は枠外まで全幅表示(左右余白なし維持) */
