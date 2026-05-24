@@ -177,10 +177,10 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .rep-label   { font-size: 1.575rem; color: var(--text); margin-bottom: 6px; }   /* PC: 紹介文(1.05rem)の1.5倍 */
 .rep-name    { font-size: 2.86rem; font-weight: 500; letter-spacing: 0.08em; margin-bottom: 28px; }   /* PC: 現状2.2remの1.3倍 */
 .rep-bio     { font-size: 1.05rem; line-height: 1.95; color: var(--text); }
-.staff-grid  { display: grid; grid-template-columns: repeat(2, 1fr); gap: 52px 80px; max-width: 1020px; margin: 0 auto; }
+.staff-grid  { display: grid; grid-template-columns: repeat(2, 1fr); gap: 52px 80px; max-width: 1200px; margin: 0 auto; }   /* PC: 1020→1200pxに拡張(ラムヌ・ルーシー・ルースが1行で収まるよう) */
 .staff-card  { display: grid; grid-template-columns: 200px 1fr; gap: 20px; align-items: start; }
 .staff-card-img  { width: 200px; aspect-ratio: 1 / 1; object-fit: cover; object-position: top center; }
-.staff-card-name { font-size: 1.575rem; font-weight: 500; margin-bottom: 8px; letter-spacing: 0.04em; }   /* PC: 代表の肩書(rep-label)と同サイズ */
+.staff-card-name { font-size: clamp(1rem, calc(2.88vw - 11.66px), 1.575rem); font-weight: 500; margin-bottom: 8px; letter-spacing: 0.04em; }   /* PC: 1280px時=1.575rem(rep-label同)。狭まると「ラムヌ・ルーシー・ルース」が1行収まる最大サイズに連続縮小 */
 .staff-card-role { font-size: 1.05rem; line-height: 1.75; color: var(--text); }                            /* PC: 代表の紹介文(rep-bio)と同サイズ */
 .officers-section { padding: 56px 0 0; text-align: center; max-width: 1020px; margin: 0 auto; }
 .officers-heading { font-size: 25px; font-weight: 500; margin-bottom: 32px; }
