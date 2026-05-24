@@ -240,7 +240,9 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .detail-eyecatch { width: 100%; }
   .detail-eyecatch img { height: auto; width: 100%; }
   .detail-eyecatch-grid { max-width: 100%; gap: 4px; }
-  .detail-col   { max-width: 100%; }
+  .detail-col   { max-width: 100%; padding-inline: 32px; }   /* SP: トップのdonate-bodyと同じ左右余白(container20+本文12) */
+  .detail-body img,
+  .detail-body .detail-img-row { margin-inline: -32px; max-width: calc(100% + 64px); width: calc(100% + 64px); }   /* SP: 画像は枠外まで全幅表示(左右余白なし維持) */
   .detail-head  { padding-top: 28px; }
   .detail-head-row { flex-wrap: wrap; gap: 4px 12px; margin-bottom: 22px; }
   .detail-title { font-size: 1.4rem; line-height: 1.5; }

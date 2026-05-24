@@ -122,7 +122,7 @@
         '<div class="header-inner">' +
           '<a href="/" class="site-logo">' +
             '<img src="' + IMG + 'logo.svg" alt="' + SITE + '" class="site-logo-img">' +
-            '<span class="site-logo-sp"><span class="logo-l1">認定NPO法人</span><br>五条クラブ</span>' +
+            '<span class="site-logo-sp"><img src="' + IMG + 'sp/header-title.svg" alt="' + SITE + '"></span>' +
           '</a>' +
           '<nav class="header-nav">' +
             '<a href="/#donate" class="btn-svg"><img src="' + IMG + 'btn-support.svg" alt="支援する"></a>' +
