@@ -177,9 +177,9 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .rep-label   { font-size: 1.575rem; color: var(--text); margin-bottom: 6px; }   /* PC: 紹介文(1.05rem)の1.5倍 */
 .rep-name    { font-size: 2.86rem; font-weight: 500; letter-spacing: 0.08em; margin-bottom: 28px; }   /* PC: 現状2.2remの1.3倍 */
 .rep-bio     { font-size: 1.05rem; line-height: 1.95; color: var(--text); }
-.staff-grid  { display: grid; grid-template-columns: repeat(2, 1fr); gap: 52px 80px; max-width: 1020px; margin: 0 auto; }   /* PC: rep-inner(1020px)と同幅 */
-.staff-card  { display: grid; grid-template-columns: 145px 1fr; gap: 20px; align-items: start; }   /* PC: 画像幅 200→145px (名前+2pxに伴いテキスト領域305pxを確保) */
-.staff-card-img  { width: 145px; aspect-ratio: 1 / 1; object-fit: cover; object-position: top center; }
+.staff-grid  { display: grid; grid-template-columns: repeat(2, 1fr); gap: 52px 40px; max-width: 1020px; margin: 0 auto; }   /* PC: rep-inner(1020px)と同幅、列間40pxに詰めて写真領域確保 */
+.staff-card  { display: grid; grid-template-columns: 165px 1fr; gap: 16px; align-items: start; }   /* PC: 画像 145→165pxに拡大、内部gap 20→16px */
+.staff-card-img  { width: 165px; aspect-ratio: 1 / 1; object-fit: cover; object-position: top center; }
 .staff-card-name { font-size: clamp(1.125rem, calc(2.0vw - 1.2px), 1.525rem); font-weight: 500; margin-bottom: 8px; letter-spacing: 0.04em; }   /* PC: 1280px時=1.525rem(=24.4px)、961px時=1.125rem(=18px)。全員1行表示 */
 .staff-card-role { font-size: 1.05rem; line-height: 1.75; color: var(--text); }                            /* PC: 代表の紹介文(rep-bio)と同サイズ */
 .officers-section { padding: 144px 0 0; text-align: center; max-width: 1020px; margin: 0 auto; }   /* PC: STAFFカード↔役員の余白を rep_section→STAFF title と同じ144pxに */
