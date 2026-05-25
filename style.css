@@ -286,3 +286,10 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .btn { font-size: 18px; }   /* CSSテキストボタンの文字をCONTACTのSVGボタンに合わせて統一 */
   .header-support-sp { padding: 6px 18px; }   /* ヘッダー内なので高さは抑える */
 }
+
+/* ============================================================ PCトップページのみ Regular(400) ============================================================ */
+@media (min-width: 769px) {
+  body.top-page,
+  body.top-page .contact-org,
+  body.top-page .site-footer { font-weight: 400; }   /* PCトップページのみ Medium(500)→Regular(400)に */
+}
