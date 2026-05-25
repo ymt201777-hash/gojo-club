@@ -138,7 +138,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 
 /* 活動報告一覧 */
 .page-accent { height: 4px; background: var(--primary); }
-.report-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 52px 32px; }
+.report-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 78px 32px; }   /* PC: サムネイル↔次行タイトル間の余白を1.5倍に(52→78) */
 .report-card { display: block; }
 .report-card.has-link { cursor: pointer; }
 .report-card.has-link:hover .report-card-title { color: var(--primary); }
