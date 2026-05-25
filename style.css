@@ -287,9 +287,19 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .header-support-sp { padding: 6px 18px; }   /* ヘッダー内なので高さは抑える */
 }
 
-/* ============================================================ PCトップページのみ Regular(400) ============================================================ */
+/* ============================================================ PC全体: Medium→Regular / Bold→Medium ============================================================ */
 @media (min-width: 769px) {
-  body.top-page,
-  body.top-page .contact-org,
-  body.top-page .site-footer { font-weight: 400; }   /* PCトップページのみ Medium(500)→Regular(400)に */
+  body,
+  .btn,
+  .sp-drawer a,
+  .activity-report-text h3,
+  .contact-org,
+  .site-footer,
+  .detail-title,
+  .rep-name,
+  .staff-card-name,
+  .officers-heading { font-weight: 400; }   /* PC全体: Medium(500)→Regular(400) */
+
+  .report-card-npo span,
+  .detail-body h3 { font-weight: 500; }   /* PC全体: Bold(700)→Medium(500) */
 }
