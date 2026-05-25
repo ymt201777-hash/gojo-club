@@ -29,7 +29,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* LAYOUT */
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 40px; }
-.section { padding: 127px 0 72px; }   /* PC: タイトルSVG上の余白(92→127、計+35) */
+.section { padding: 117px 0 72px; }   /* PC: タイトルSVG上の余白(92→117、計+25)。ACTIVITY REPORTに適用 */
+.contact-section { padding-top: 147px; }   /* PC: CONTACTのみ他section(SPONSOR/PARTNER/DONATE)に合わせて+30 */
 
 /* SVGセクションタイトル（デザイナー提供） */
 .section-title-svg {
@@ -95,7 +96,7 @@ picture.swap { display: contents; }
 .hero-img { width: 100%; height: 750px; object-fit: cover; object-position: center; }
 
 /* INTRO */
-.intro { padding: 195px 0 68px; text-align: center; }   /* PC: 上(ヒーロー下)の余白(160→195、計+35)。下の視覚余白 intro pb 68 + 次section pt 127 = 195 で一致 */
+.intro { padding: 185px 0 68px; text-align: center; }   /* PC: 上(ヒーロー下)の余白(160→185、計+25)。下の視覚余白 intro pb 68 + 次section pt 117 = 185 で一致 */
 .intro p { font-size: 1.05rem; line-height: 3.6; color: var(--text); }   /* PC: 行間1.5倍(2.4→3.6) */
 .sp-br { display: none; }   /* SP専用改行（PCでは非表示） */
 
