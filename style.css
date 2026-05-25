@@ -207,6 +207,9 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 @media (max-width: 768px) {
   .container  { padding: 0 20px; }
   .section    { padding: 48px 0; }
+  /* SP・トップページ限定: 各セクション間の視覚gapを108pxに統一(DONATE→CONTACT基準)。intro→AR(158)は据え置き */
+  body.top-page .section:not([style]):not(.contact-section) { padding-bottom: 60px; }   /* ACTIVITY REPORTのpbを48→60 */
+  body.top-page .section + .section:not(.contact-section) { padding-top: 48px !important; }   /* SPONSOR/PARTNER/DONATEのインラインstyle pt:110を48に上書き */
   .header-inner { padding: 10px 20px; }
   .site-logo-img { display: none; }
   .site-logo-sp { display: block; line-height: 0; margin-left: 8px; }   /* SPはヘッダータイトル画像を表示、左側に少し余白 */
