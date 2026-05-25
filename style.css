@@ -29,8 +29,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* LAYOUT */
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 40px; }
-.section { padding: 92px 0 72px; }   /* PC: タイトルSVG上の余白92px(ACTIVITY REPORTに適用) */
-.contact-section { padding-top: 167px; }   /* PC: CONTACTのみ他section(SPONSOR/PARTNER/DONATE)に合わせて広め */
+.section { padding: 92px 0 60px; }   /* PC: pt92(ACTIVITY REPORT)/pb60で、ACTIVITY REPORT終→SPONSOR始の視覚gap=60+110=170 */
+.contact-section { padding-top: 110px; }   /* PC: DONATE終→CONTACT始の視覚gap=60+110=170 で他と統一 */
 
 /* SVGセクションタイトル（デザイナー提供） */
 .section-title-svg {
