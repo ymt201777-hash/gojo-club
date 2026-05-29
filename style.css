@@ -185,8 +185,8 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .staff-card  { display: contents; }   /* PC: .staff-cardの箱を消し、img(.staff-card-img)とdivを親grid直下の2列に直接配置 */
 .staff-card:nth-child(odd) { margin-right: 0; }   /* PC: 2列時代の負margin打ち消し(SPには影響なし、念のため残置) */
 .staff-card-img  { width: 190px; aspect-ratio: 1 / 1; object-fit: cover; object-position: top center; }
-.staff-card-name { font-size: clamp(1rem, calc(2.88vw - 11.66px), 1.575rem); font-weight: 500; margin-bottom: 8px; letter-spacing: 0.04em; text-align: center; }   /* PC: 1280px時=1.575rem(rep-label同)、961px時=1.0rem。中央揃え */
-.staff-card-role { font-size: 1.05rem; line-height: 1.75; color: var(--text); text-align: center; }                            /* PC: 代表の紹介文(rep-bio)と同サイズ。中央揃え */
+.staff-card-name { font-size: clamp(1rem, calc(2.88vw - 11.66px), 1.575rem); font-weight: 500; margin-bottom: 8px; letter-spacing: 0.04em; }   /* PC: 1280px時=1.575rem(rep-label同)、961px時=1.0rem */
+.staff-card-role { font-size: 1.05rem; line-height: 1.75; color: var(--text); }                            /* PC: 代表の紹介文(rep-bio)と同サイズ */
 .staff-card-role span::before { content: "・"; }   /* PC: 肩書各行の頭に「・」 */
 .staff-card-role .role-cont::before { content: "・"; visibility: hidden; }   /* PC: 継続行は「・」を不可視化して空間だけ残し、頭文字を上の行(サ/グ)と揃える */
 .staff-card-role .role-nowrap { white-space: nowrap; font-size: 0.95em; letter-spacing: -0.02em; }   /* PC/SP共通: 長めの肩書を強制1行表示(微縮で確実に収める) */
