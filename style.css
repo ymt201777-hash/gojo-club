@@ -181,9 +181,9 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .rep-label   { font-size: 1.575rem; color: var(--text); margin-bottom: 6px; }   /* PC: 紹介文(1.05rem)の1.5倍 */
 .rep-name    { font-size: 2.86rem; font-weight: 500; letter-spacing: 0.08em; margin-bottom: 28px; }   /* PC: 現状2.2remの1.3倍 */
 .rep-bio     { font-size: 1.05rem; line-height: 1.95; color: var(--text); }
-.staff-grid  { display: grid; grid-template-columns: repeat(2, 1fr); gap: 52px 120px; max-width: 1020px; margin: 0 auto; }   /* PC: rep-inner同幅(1020px)、列gap 120px */
-.staff-card  { display: grid; grid-template-columns: 190px 1fr; gap: 16px; align-items: start; margin-right: -68px; }   /* PC: 画像190px、右側のみ-68px負marginでカード幅518pxに拡張(名前1.575rem収容、左端はrepと揃う) */
-.staff-card:nth-child(odd) { margin-right: -100px; }   /* PC: 左列カードのみさらにオーバーフローを増やす(letter-spacing込みで名前確実に1行) */
+.staff-grid  { display: grid; grid-template-columns: 1fr; gap: 52px; max-width: 1020px; margin: 0 auto; justify-items: center; }   /* PC: 1列中央揃え */
+.staff-card  { display: grid; grid-template-columns: 190px auto; gap: 16px; align-items: start; }   /* PC: 画像190px + テキスト(content幅)。負marginは1列化に伴い撤廃 */
+.staff-card:nth-child(odd) { margin-right: 0; }   /* PC: 2列時の負margin打ち消し(SP override元ルールとの整合) */
 .staff-card-img  { width: 190px; aspect-ratio: 1 / 1; object-fit: cover; object-position: top center; }
 .staff-card-name { font-size: clamp(1rem, calc(2.88vw - 11.66px), 1.575rem); font-weight: 500; margin-bottom: 8px; letter-spacing: 0.04em; }   /* PC: 1280px時=1.575rem(rep-label同)、961px時=1.0rem */
 .staff-card-role { font-size: 1.05rem; line-height: 1.75; color: var(--text); }                            /* PC: 代表の紹介文(rep-bio)と同サイズ */
