@@ -292,6 +292,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .btn-svg img  { height: 40px; }
   .btn { font-size: 18px; }   /* CSSテキストボタンの文字をCONTACTのSVGボタンに合わせて統一 */
   .header-support-sp { padding: 6px 18px; }   /* ヘッダー内なので高さは抑える */
+  .pc-only { display: none !important; }   /* PC専用要素(講演会のご案内セクション・企業法人ボタン)はSPでは非表示。SP版素材が入り次第対応 */
 }
 
 /* ============================================================ PC全体: Medium→Regular / Bold→Medium ============================================================ */
@@ -309,4 +310,15 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 
   .report-card-npo span,
   .detail-body h3 { font-weight: 500; }   /* PC全体: Bold(700)→Medium(500) */
+}
+
+/* ============================================================ PC専用: 講演会のご案内 / 追加ボタン ============================================================ */
+@media (min-width: 769px) {
+  /* 講演会のご案内 */
+  .lecture-lead { font-size: 1.05rem; line-height: 2.4; color: var(--text); text-align: center; margin-bottom: 28px; }   /* 文字サイズはINTRO本文(.intro p)と同じ1.05rem */
+  .lecture-body { max-width: 900px; margin: 0 auto 36px; font-size: 1.05rem; line-height: 2.4; color: var(--text); text-align: center; }   /* 他セクション本文(.donate-body)と同じ */
+  .lecture-btn-wrap { text-align: center; }
+
+  /* 支援金募集要項: お申込はこちら の右に「企業・法人の皆様へ」を並べる */
+  .donate-btn-wrap { display: flex; justify-content: center; align-items: center; gap: 16px; }
 }
