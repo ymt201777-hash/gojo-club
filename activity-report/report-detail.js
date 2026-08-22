@@ -14,6 +14,7 @@
 
   var IMG = '/images/';                                  // 画像フォルダ
   var SITE = '認定NPO法人五条クラブ';
+  var FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSf1DILhXa41wt5uwXnIUgd5tR2fM9UG1Bz9wDiELXGrGOWsBw/viewform';   // 支援する Googleフォーム
   var BASE = 'https://gojo-club.jp/activity-report/' + a.slug + '/';
 
   /* ---- <head> のメタ情報 ---- */
@@ -142,7 +143,38 @@
   }
 
   function footer() {
-    return '<footer class="site-footer"><p>© 2026 ' + SITE + ' All rights reserved.</p></footer>';
+    /* SP用（PCでは非表示）＋ PC共通フッター */
+    return '<footer class="site-footer sp-only"><p>© 2026 ' + SITE + ' All rights reserved.</p></footer>' +
+      '<footer class="footer-pc pc-only">' +
+        '<div class="footer-inner">' +
+          '<div class="footer-org">' +
+            '<p class="footer-org-name">' + SITE + '</p>' +
+            '<address class="footer-address">' +
+              '〒452-0943<br>' +
+              '愛知県清須市新清洲2-9-13<br>' +
+              '千成ソミュール清洲501号室<br>' +
+              'Tel : 052-401-5159<br>' +
+              'Fax : 052-401-5159<br>' +
+              'Mail : <a href="mailto:info@gojo-club.jp">info@gojo-club.jp</a>' +
+            '</address>' +
+          '</div>' +
+          '<ul class="footer-nav">' +
+            '<li><a href="/">TOP</a></li>' +
+            '<li><a href="' + FORM + '">支援する</a></li>' +
+            '<li><a href="#">企業・法人の皆様へ</a></li>' +
+            '<li><a href="/activity-report/">活動報告</a></li>' +
+            '<li><a href="/#sponsor">スポンサー</a></li>' +
+          '</ul>' +
+          '<ul class="footer-nav">' +
+            '<li><a href="/#donate">支援金募集要項</a></li>' +
+            '<li><a href="/staff/">STAFF</a></li>' +
+            '<li><a href="/#lecture">講演会のご案内</a></li>' +
+            '<li><a href="#">情報公開</a></li>' +
+            '<li><a href="#">お問い合わせ</a></li>' +
+          '</ul>' +
+        '</div>' +
+        '<p class="footer-copy">© 2026 ' + SITE + ' All rights reserved.</p>' +
+      '</footer>';
   }
 
   function initDrawer() {

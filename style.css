@@ -322,3 +322,27 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   /* 支援金募集要項: お申込はこちら の右に「企業・法人の皆様へ」を並べる */
   .donate-btn-wrap { display: flex; justify-content: center; align-items: center; gap: 16px; }
 }
+
+/* ============================================================ PC専用: 共通フッター（デザインカンプ準拠） ============================================================ */
+@media (min-width: 769px) {
+  .sp-only { display: none !important; }   /* SP専用要素(CONTACTセクション・旧シンプルフッター)はPCでは非表示 */
+
+  /* 最終セクション下の余白（PCではグレーのフッターまで60px空ける） */
+  .section:has(+ .site-footer),
+  article:has(+ .site-footer) .section:last-of-type { padding-bottom: 60px; }
+
+  .footer-pc { background: #e4e4e4; color: var(--text); padding: 88px 0 185px; }   /* 背景色・上下余白はカンプ実測 */
+  .footer-inner {
+    max-width: var(--max-width); margin: 0 auto; padding: 0 90px;
+    display: grid; grid-template-columns: 1fr max-content max-content; column-gap: 35px; align-items: start;
+  }   /* カンプ実測: 左に法人情報、右にリンク2列(列間35px)。リンク列は右端揃え */
+  .footer-org-name  { font-size: 21px; line-height: 1.6; margin-bottom: 14px; }
+  .footer-address   { font-style: normal; font-size: 16px; line-height: 1.8; }
+  .footer-address a { color: inherit; }
+  .footer-address a:hover,
+  .footer-nav a:hover { color: var(--primary); }
+  .footer-nav       { padding-top: 46px; }   /* リンク1行目を住所1行目にそろえる(法人名の高さ分だけ下げる) */
+  .footer-nav li    { font-size: 21px; line-height: 1.8; white-space: nowrap; }
+  .footer-nav li::before { content: "・"; }
+  .footer-copy      { text-align: center; font-size: 13.5px; line-height: 1.8; margin-top: 64px; }
+}
