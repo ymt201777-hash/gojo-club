@@ -127,8 +127,7 @@
           '</a>' +
           '<nav class="header-nav">' +
             '<a href="https://docs.google.com/forms/d/e/1FAIpQLSf1DILhXa41wt5uwXnIUgd5tR2fM9UG1Bz9wDiELXGrGOWsBw/viewform" class="btn-svg"><img src="' + IMG + 'btn-support.svg" alt="支援する"></a>' +
-            '<a href="/activity-report/" class="btn-svg"><img src="' + IMG + 'btn-activity.svg" alt="活動報告"></a>' +
-            '<a href="/staff/" class="btn-svg"><img src="' + IMG + 'btn-staff.svg" alt="STAFF"></a>' +
+            '<a href="#" class="btn-svg"><img src="' + IMG + 'btn-corporate.svg" alt="企業・法人の皆様へ"></a>' +   /* TODO: リンク先未定 */
           '</nav>' +
           '<a href="https://docs.google.com/forms/d/e/1FAIpQLSf1DILhXa41wt5uwXnIUgd5tR2fM9UG1Bz9wDiELXGrGOWsBw/viewform" class="btn btn-sm header-support-sp">支援する</a>' +
           '<button class="nav-toggle" id="navToggle" aria-label="メニューを開く"><span></span><span></span><span></span></button>' +
