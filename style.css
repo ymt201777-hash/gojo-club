@@ -315,7 +315,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 /* ============================================================ PC専用: 講演会のご案内 / 追加ボタン ============================================================ */
 @media (min-width: 769px) {
   /* 講演会のご案内 */
-  .lecture-lead { font-size: 1.05rem; line-height: 2.4; color: var(--text); text-align: center; margin-bottom: 28px; }   /* 文字サイズはINTRO本文(.intro p)と同じ1.05rem */
+  .lecture-lead { font-size: 1.575rem; line-height: 2.4; color: var(--text); text-align: center; margin-bottom: 28px; }   /* リードは本文(1.05rem)の1.5倍 */
   .lecture-body { max-width: 900px; margin: 0 auto 36px; font-size: 1.05rem; line-height: 2.4; color: var(--text); text-align: center; }   /* 他セクション本文(.donate-body)と同じ */
   .lecture-btn-wrap { text-align: center; }
 
