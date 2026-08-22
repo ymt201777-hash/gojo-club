@@ -346,3 +346,48 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .footer-nav li::before { content: "・"; }
   .footer-copy      { text-align: center; font-size: 13.5px; line-height: 1.8; margin-top: 64px; }
 }
+
+/* ============================================================ 企業・法人の皆様へ（/corporate/）カンプ実測準拠。専用クラスのみ使用のため他ページ・SP版に影響なし ============================================================ */
+.corp-inner { max-width: var(--max-width); margin: 0 auto; padding: 90px 90px 158px; }   /* 左右90px・上90px・下158pxはカンプ実測(フッターまでの余白) */
+
+/* リード */
+.corp-headline { width: 58.9%; height: auto; margin-bottom: 32px; }   /* 702.36/1193.43。セクションタイトルSVGと同じ倍率で表示される幅 */
+.corp-lead     { font-size: 16px; line-height: 1.8; color: var(--text); }
+
+/* 各セクション */
+.corp-section  { margin-top: 110px; }   /* 前ブロック終端からの視覚gap */
+.corp-title    { display: block; width: 100%; height: auto; margin-bottom: 30px; }   /* 見出しSVG(罫線込みで全幅) */
+.corp-body     { font-size: 16px; line-height: 1.8; color: var(--text); }
+
+/* メリット: 2列 */
+.corp-merit    { display: grid; grid-template-columns: max-content max-content; column-gap: 25px; justify-content: start; }
+.corp-merit li { font-size: 20px; line-height: 1.95; color: var(--text); }
+.corp-merit li::before { content: "・"; }
+
+/* 税制優遇 */
+.corp-diagram  { display: block; width: 100%; height: auto; margin-top: 12px; }   /* カンプは見出し→図の間が42px(他セクションの30px+12) */
+.corp-note     { font-size: 16px; line-height: 1.8; color: var(--text); margin-top: 35px; }
+
+/* 情報公開 */
+.corp-link       { font-size: 21px; line-height: 1.8; margin-top: 19px; }
+.corp-link a     { color: var(--text); transition: color 0.2s; }
+.corp-link a:hover { color: var(--primary); }
+
+/* ご支援の方法 */
+.corp-support        { counter-reset: corp; list-style: none; }   /* olの既定マーカーを消し、::beforeのカウンタだけで「1 . 」を出す */
+.corp-support > li   { counter-increment: corp; margin-top: 20px; }
+.corp-support h3     { font-size: 20px; font-weight: 400; line-height: 1.8; color: var(--text); }
+.corp-support h3::before { content: counter(corp) " . "; }
+.corp-support p      { font-size: 16px; line-height: 1.8; color: var(--text); padding-left: 27px; }
+
+/* 締め＋お問い合わせボタン */
+.corp-closing      { margin-top: 110px; }
+.corp-closing-text { font-size: 20px; line-height: 1.65; color: var(--text); }
+.corp-contact-btn  { margin-top: 14px; }
+
+/* 暫定: 幅が足りない環境ではメリットを1列に（SP版は素材が入り次第あらためて対応） */
+@media (max-width: 1000px) {
+  .corp-inner { padding: 60px 20px 80px; }
+  .corp-headline { width: 100%; }
+  .corp-merit { grid-template-columns: 1fr; }
+}
