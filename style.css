@@ -352,12 +352,12 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 
 /* リード */
 .corp-headline { width: 58.9%; height: auto; margin-bottom: 32px; }   /* 702.36/1193.43。セクションタイトルSVGと同じ倍率で表示される幅 */
-.corp-lead     { font-size: 16px; line-height: 1.8; color: var(--text); }
+.corp-lead     { font-size: 16px; line-height: 2.4; color: var(--text); }   /* 行間はトップの支援金募集要項(.donate-body)と統一 */
 
 /* 各セクション */
 .corp-section  { margin-top: 110px; }   /* 前ブロック終端からの視覚gap */
 .corp-title    { display: block; width: 100%; height: auto; margin-bottom: 30px; }   /* 見出しSVG(罫線込みで全幅) */
-.corp-body     { font-size: 16px; line-height: 1.8; color: var(--text); }
+.corp-body     { font-size: 16px; line-height: 2.4; color: var(--text); }   /* 同上 */
 
 /* メリット: 2列 */
 .corp-merit    { display: grid; grid-template-columns: max-content max-content; column-gap: 25px; justify-content: start; }
@@ -366,7 +366,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 
 /* 税制優遇 */
 .corp-diagram  { display: block; width: 100%; height: auto; margin-top: 12px; }   /* カンプは見出し→図の間が42px(他セクションの30px+12) */
-.corp-note     { font-size: 16px; line-height: 1.8; color: var(--text); margin-top: 35px; }
+.corp-note     { font-size: 16px; line-height: 2.4; color: var(--text); margin-top: 35px; }   /* 同上 */
 
 /* 情報公開 */
 .corp-link       { font-size: 21px; line-height: 1.8; margin-top: 19px; }
@@ -378,7 +378,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .corp-support > li   { counter-increment: corp; margin-top: 20px; }
 .corp-support h3     { font-size: 20px; font-weight: 400; line-height: 1.8; color: var(--text); }
 .corp-support h3::before { content: counter(corp) " . "; }
-.corp-support p      { font-size: 16px; line-height: 1.8; color: var(--text); padding-left: 27px; }
+.corp-support p      { font-size: 16px; line-height: 2.4; color: var(--text); padding-left: 27px; }   /* 同上 */
 
 /* 締め＋お問い合わせボタン */
 .corp-closing      { margin-top: 110px; }
