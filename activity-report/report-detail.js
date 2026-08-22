@@ -127,7 +127,7 @@
           '</a>' +
           '<nav class="header-nav">' +
             '<a href="https://docs.google.com/forms/d/e/1FAIpQLSf1DILhXa41wt5uwXnIUgd5tR2fM9UG1Bz9wDiELXGrGOWsBw/viewform" class="btn-svg"><img src="' + IMG + 'btn-support.svg" alt="支援する"></a>' +
-            '<a href="/corporate/" class="btn-svg"><img src="' + IMG + 'btn-corporate.svg" alt="企業・法人の皆様へ"></a>' +
+            '<a href="/partnership/" class="btn-svg"><img src="' + IMG + 'btn-corporate.svg" alt="企業・法人の皆様へ"></a>' +
           '</nav>' +
           '<a href="https://docs.google.com/forms/d/e/1FAIpQLSf1DILhXa41wt5uwXnIUgd5tR2fM9UG1Bz9wDiELXGrGOWsBw/viewform" class="btn btn-sm header-support-sp">支援する</a>' +
           '<button class="nav-toggle" id="navToggle" aria-label="メニューを開く"><span></span><span></span><span></span></button>' +
@@ -160,7 +160,7 @@
           '<ul class="footer-nav">' +
             '<li><a href="/">TOP</a></li>' +
             '<li><a href="' + FORM + '">支援する</a></li>' +
-            '<li><a href="/corporate/">企業・法人の皆様へ</a></li>' +
+            '<li><a href="/partnership/">企業・法人の皆様へ</a></li>' +
             '<li><a href="/activity-report/">活動報告</a></li>' +
             '<li><a href="/#sponsor">スポンサー</a></li>' +
           '</ul>' +
@@ -168,7 +168,7 @@
             '<li><a href="/#donate">支援金募集要項</a></li>' +
             '<li><a href="/staff/">STAFF</a></li>' +
             '<li><a href="/#lecture">講演会のご案内</a></li>' +
-            '<li><a href="/corporate/#disclosure">情報公開</a></li>' +
+            '<li><a href="/partnership/#disclosure">情報公開</a></li>' +
             '<li><a href="#">お問い合わせ</a></li>' +
           '</ul>' +
         '</div>' +
