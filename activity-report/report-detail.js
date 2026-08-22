@@ -167,7 +167,7 @@
           '<ul class="footer-nav">' +
             '<li><a href="/#donate">支援金募集要項</a></li>' +
             '<li><a href="/staff/">STAFF</a></li>' +
-            '<li><a href="/#lecture">講演会のご案内</a></li>' +
+            '<li><a href="/lecture/">講演会のご案内</a></li>' +
             '<li><a href="/partnership/#disclosure">情報公開</a></li>' +
             '<li><a href="#">お問い合わせ</a></li>' +
           '</ul>' +

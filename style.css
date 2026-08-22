@@ -385,8 +385,8 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .corp-closing-text { font-size: 20px; line-height: 1.65; color: var(--text); }
 .corp-contact-btn  { margin-top: 14px; }
 
-/* 暫定: 幅が足りない環境ではメリットを1列に（SP版は素材が入り次第あらためて対応） */
-@media (max-width: 1000px) {
+/* 暫定: 狭めPC以下では1列に（SP版は素材が入り次第あらためて対応）。サイト共通の狭めPC境界960pxに合わせる */
+@media (max-width: 960px) {
   .corp-inner { padding: 60px 20px 80px; }
   .corp-headline { width: 100%; }
   .corp-merit { grid-template-columns: 1fr; }
@@ -400,4 +400,45 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 /* 狭めPC(769〜960px)は幅が足りないため、ヘッダー既定の20pxに本文もそろえる */
 @media (min-width: 769px) and (max-width: 960px) {
   .container { padding: 0 20px; }
+}
+
+/* ============================================================ 講演会のご案内（/lecture/）カンプ実測準拠。専用クラスのみ使用のため他ページ・SP版に影響なし ============================================================ */
+.lec-inner { max-width: var(--max-width); margin: 0 auto; padding: 90px 90px 149px; }   /* 左右はサイト共通の90px、上90px・下149pxはカンプ実測 */
+
+.lec-headline { display: block; width: 86.27%; height: auto; margin-bottom: 24px; }   /* 1029.44/1193.22。見出しSVGと同じ倍率で表示される幅 */
+.lec-body     { font-size: 16px; line-height: 1.8; color: var(--text); }
+
+.lec-section  { margin-top: 102px; }   /* 前ブロック終端からの視覚gap */
+.lec-title    { display: block; width: 100%; height: auto; margin-bottom: 24px; }   /* 見出しSVG(罫線込みで全幅) */
+
+/* このような団体におすすめです: カンプのタブ位置に合わせた5列 */
+.lec-target   { display: grid; grid-template-columns: 196px 150px 105px 102px auto; font-size: 16px; line-height: 1.8; color: var(--text); }
+.lec-target li { white-space: nowrap; }
+.lec-target li::before { content: "・"; }
+
+/* 講演テーマ例: 2列 */
+.lec-theme    { display: grid; grid-template-columns: max-content auto; column-gap: 16px; font-size: 16px; line-height: 1.8; color: var(--text); }   /* カンプは1列目318pxだが本文16pxでは最長行(3行目)が収まらないため max-content + 全角スペース相当の16px */
+.lec-theme li { white-space: nowrap; }
+.lec-theme li::before { content: "・"; }
+
+/* 講師紹介 */
+.lec-profile       { display: grid; grid-template-columns: 38.6% 1fr; column-gap: 41px; align-items: start; margin-top: 7px; }
+.lec-profile-img   { display: block; width: 100%; height: auto; }
+.lec-profile-text  { padding-top: 76px; }   /* 肩書1行目を写真上端から76px下げる(カンプ実測) */
+.lec-profile-label { font-size: 22px; line-height: 1.6; color: var(--text); margin-bottom: 5px; }
+.lec-profile-name  { font-size: 30px; font-weight: 400; line-height: 1.4; color: var(--text); margin-bottom: 30px; }
+.lec-profile-list  { font-size: 16px; line-height: 1.8; color: var(--text); }
+.lec-profile-list li::before { content: "・"; }
+
+/* お申し込み お問い合わせ */
+.lec-contact-btn { margin-top: 12px; }
+
+/* 暫定: 狭めPC以下では1列に（SP版は素材が入り次第あらためて対応）。サイト共通の狭めPC境界960pxに合わせる */
+@media (max-width: 960px) {
+  .lec-inner   { padding: 60px 20px 80px; }
+  .lec-headline { width: 100%; }
+  .lec-target, .lec-theme { grid-template-columns: 1fr; }
+  .lec-target li, .lec-theme li { white-space: normal; }
+  .lec-profile { grid-template-columns: 1fr; row-gap: 24px; }
+  .lec-profile-text { padding-top: 0; }
 }
