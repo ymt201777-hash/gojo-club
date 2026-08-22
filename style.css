@@ -391,3 +391,13 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .corp-headline { width: 100%; }
   .corp-merit { grid-template-columns: 1fr; }
 }
+
+/* ============================================================ PC: ヘッダー / 本文 / フッターの左右余白を90pxに統一（カンプ実測88px） ============================================================ */
+@media (min-width: 961px) {
+  .header-inner { padding: 14px 90px; }   /* 40px→90px。ロゴ左端・ボタン右端が本文/フッターと一直線に揃う */
+  .container    { padding: 0 90px; }      /* 各セクション本文もヘッダーと同じ左右余白に */
+}
+/* 狭めPC(769〜960px)は幅が足りないため、ヘッダー既定の20pxに本文もそろえる */
+@media (min-width: 769px) and (max-width: 960px) {
+  .container { padding: 0 20px; }
+}
