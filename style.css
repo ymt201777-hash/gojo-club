@@ -425,6 +425,8 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 
 .lec-section  { margin-top: 102px; }   /* 前ブロック終端からの視覚gap */
 .lec-title    { display: block; width: 100%; height: auto; margin-bottom: 24px; }   /* 見出しSVG(罫線込みで全幅) */
+.lec-headline-text,
+.lec-title-text { display: none; }   /* SP専用のテキスト見出し。PCでは常に非表示(SVGを使う) */
 
 /* このような団体におすすめです: 列間を均一にした5列 */
 .lec-target   { display: grid; grid-template-columns: repeat(4, max-content) auto; column-gap: clamp(24px, 5%, 55px); font-size: 16px; line-height: 1.8; color: var(--text); }   /* 各列は最長項目の幅ぴったり + 均一の列間。1280px以上では列間55pxとなり、3列目(PTA/青年会議所)の頭が見出しの「め」の真下に一致 */
@@ -499,4 +501,36 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .corp-body--flow br,
   .corp-support p br,
   .corp-closing-text br { display: none; }
+}
+
+/* ============================================================ SP: 講演会のご案内（/lecture/）カンプ実測準拠。max-width:960px の暫定フォールバックより後に置いて上書きする ============================================================ */
+@media (max-width: 768px) {
+  .lec-inner { padding: 90px 24px 0; }   /* 左右24px・上90px。下はフッター(.site-footer)の上余白150pxに任せる */
+
+  /* リード: SVG見出し→テキスト3行、本文は自然折り返し */
+  .lec-headline      { display: none; }
+  .lec-headline-text { display: block; font-size: 22px; line-height: 1.68; color: var(--text); margin-bottom: 20px; }
+  .lec-body          { font-size: 17px; line-height: 1.88; text-align: justify; }
+  .lec-hero .lec-body br,
+  .pc-br             { display: none; }   /* SPは自然に折り返す */
+
+  /* セクション見出し: SVG(罫線付き)→テキスト */
+  .lec-section    { margin-top: 60px; }
+  .lec-title      { display: none; }
+  .lec-title-text { display: block; font-size: clamp(19px, 5.4vw, 23px); font-weight: 400; line-height: 1.5; color: var(--text); margin-bottom: 22px; }
+
+  /* 「・項目」はすべて1行1項目 */
+  .lec-target, .lec-theme { grid-template-columns: 1fr; column-gap: 0; }
+  .lec-target li, .lec-theme li { font-size: 17px; line-height: 1.88; white-space: normal; padding-right: 0; }
+  .lec-dots span { display: block; margin-right: 0; }
+  .lec-dots br   { display: none; }
+
+  /* 講師紹介: 写真を全幅にして縦積み */
+  .lec-profile       { grid-template-columns: 1fr; column-gap: 0; row-gap: 0; margin-top: 16px; }
+  .lec-profile-text  { padding-top: 27px; }
+  .lec-profile-label { font-size: 17px; line-height: 1.88; margin-bottom: 3px; }
+  .lec-profile-name  { font-size: 22px; line-height: 1.4; margin-bottom: 11px; }
+  .lec-profile-list  { font-size: 17px; line-height: 1.88; }
+
+  .lec-contact-btn { margin-top: 30px; }
 }
