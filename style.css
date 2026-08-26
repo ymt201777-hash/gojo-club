@@ -301,6 +301,9 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .lecture-body  { font-size: 17px; line-height: 1.76; color: var(--text); text-align: justify; padding: 0 12px; margin-bottom: 23px; }
   .lecture-body br { display: none; }   /* SPは自然に折り返す */
   .lecture-btn-wrap { text-align: center; }
+  /* ドロワーメニュー(カンプ実測): 項目の行間を詰め、右余白を26pxに */
+  .sp-drawer   { padding: 12px 22px 48px; }
+  .sp-drawer a { padding: 6px 4px; }
   .pc-only { display: none !important; }   /* PC専用要素はSPでは非表示 */
 }
 
