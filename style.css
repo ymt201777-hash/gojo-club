@@ -291,7 +291,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .officer-role { font-size: 22px; margin-right: 0; }   /* 肩書22px・固定幅列で開始位置を揃える */
   .btn-svg img  { height: 40px; }
   .btn { font-size: 18px; }   /* CSSテキストボタンの文字をCONTACTのSVGボタンに合わせて統一 */
-  .header-support-sp { padding: 2px 18px; font-size: 15.5px; }   /* カンプ実測: ボタン約101x32px */
+  .header-support-sp { padding: 4px 18px; font-size: 15.5px; }   /* ボタン約101x36px(上下paddingで高さ調整) */
   .nav-toggle { width: 41px; height: 14px; }   /* カンプ実測: 横に広く薄い3本線(線2px・間隔4px) */
   /* --- SP: 支援金募集要項のボタン2つを縦積み --- */
   .donate-btn-wrap { display: flex; flex-direction: column; align-items: center; gap: 22px; }
