@@ -411,9 +411,9 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .lec-section  { margin-top: 102px; }   /* 前ブロック終端からの視覚gap */
 .lec-title    { display: block; width: 100%; height: auto; margin-bottom: 24px; }   /* 見出しSVG(罫線込みで全幅) */
 
-/* このような団体におすすめです: セクション幅いっぱいの5列 */
-.lec-target   { display: grid; grid-template-columns: minmax(max-content, 22%) minmax(max-content, 17.6%) 20% 20% auto; font-size: 16px; line-height: 1.8; color: var(--text); }   /* 3列目(PTA/青年会議所)の頭が見出し「おすすめです。」の「め」の真下(コンテンツ幅の39.6%)に来る配分。狭い幅では minmax で最低限の桁を確保し重なりを防ぐ */
-.lec-target li { white-space: nowrap; padding-right: 16px; }   /* 列がmax-contentまで詰まる幅でも最低16pxの間隔を確保 */
+/* このような団体におすすめです: 列間を均一にした5列 */
+.lec-target   { display: grid; grid-template-columns: repeat(4, max-content) auto; column-gap: clamp(24px, 5%, 55px); font-size: 16px; line-height: 1.8; color: var(--text); }   /* 各列は最長項目の幅ぴったり + 均一の列間。1280px以上では列間55pxとなり、3列目(PTA/青年会議所)の頭が見出しの「め」の真下に一致 */
+.lec-target li { white-space: nowrap; }
 .lec-target li::before { content: "・"; }
 
 /* 講演テーマ例: 2列 */
