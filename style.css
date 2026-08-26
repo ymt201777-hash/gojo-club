@@ -411,8 +411,8 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .lec-section  { margin-top: 102px; }   /* 前ブロック終端からの視覚gap */
 .lec-title    { display: block; width: 100%; height: auto; margin-bottom: 24px; }   /* 見出しSVG(罫線込みで全幅) */
 
-/* このような団体におすすめです: カンプのタブ位置に合わせた5列 */
-.lec-target   { display: grid; grid-template-columns: 196px 150px 105px 102px auto; font-size: 16px; line-height: 1.8; color: var(--text); }
+/* このような団体におすすめです: セクション幅いっぱいの5列 */
+.lec-target   { display: grid; grid-template-columns: 28% 22% 17% 17% auto; font-size: 16px; line-height: 1.8; color: var(--text); }   /* セクション幅いっぱいに展開。3列目(PTA/青年会議所)の頭がちょうど中央(50%)に来る配分 */
 .lec-target li { white-space: nowrap; }
 .lec-target li::before { content: "・"; }
 
