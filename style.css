@@ -366,6 +366,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 /* 各セクション */
 .corp-section  { margin-top: 110px; }   /* 前ブロック終端からの視覚gap */
 .corp-title    { display: block; width: 100%; height: auto; margin-bottom: 30px; }   /* 見出しSVG(罫線込みで全幅) */
+.corp-title-text { display: none; }   /* SP専用のテキスト見出し。PCでは常に非表示(SVG見出しを使う) */
 .corp-body     { font-size: 16px; line-height: 2.4; color: var(--text); }   /* 同上 */
 
 /* メリット: 2列 */
@@ -459,4 +460,43 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .lec-target li, .lec-theme li { white-space: normal; }
   .lec-profile { grid-template-columns: 1fr; row-gap: 24px; }
   .lec-profile-text { padding-top: 0; }
+}
+
+/* ============================================================ SP: 企業・法人の皆様へ（/partnership/）カンプ実測準拠。max-width:960px の暫定フォールバックより後に置いて上書きする ============================================================ */
+@media (max-width: 768px) {
+  .corp-inner    { padding: 90px 24px 0; }   /* 左右24px・上90px。下はフッター(.site-footer)の上余白150pxに任せる */
+
+  .corp-headline { width: 100%; margin-bottom: 28px; }   /* 見出しSVGは幅いっぱい(PCと同じ素材) */
+  .corp-lead,
+  .corp-body     { font-size: 17px; line-height: 1.88; text-align: justify; }
+
+  .corp-section  { margin-top: 60px; }   /* PCの110pxより詰める */
+  .corp-title      { display: none; }                 /* SPではSVG見出し(罫線付き)を使わない */
+  .corp-title-text { display: block; font-size: clamp(19px, 5.4vw, 23px); font-weight: 400; line-height: 1.5; color: var(--text); margin-bottom: 18px; }
+
+  /* メリット: 1列・本文と同じ級数 */
+  .corp-merit    { grid-template-columns: 1fr; }
+  .corp-merit li { font-size: 17px; line-height: 1.88; }
+
+  /* 税制優遇: SP専用の縦長図版 */
+  .corp-diagram  { margin-top: 0; }
+  .corp-note     { font-size: 17px; line-height: 1.88; text-align: justify; margin-top: 18px; }
+
+  /* 情報公開 */
+  .corp-link     { font-size: 17px; line-height: 1.88; margin-top: 0; }
+
+  /* ご支援の方法: 説明文のインデントを外し、項目間を1行分あける */
+  .corp-support > li { margin-top: 31px; }
+  .corp-support h3   { font-size: 17px; line-height: 1.88; }
+  .corp-support p    { font-size: 17px; line-height: 1.88; padding-left: 0; text-align: justify; }
+
+  /* 締め＋お問い合わせボタン(左寄せ) */
+  .corp-closing      { margin-top: 60px; }
+  .corp-closing-text { font-size: 17px; line-height: 1.88; text-align: justify; }
+  .corp-contact-btn  { margin-top: 14px; }
+
+  /* SPはPC用の強制改行を外して自然に折り返す(カンプ準拠。注記と情報公開の本文だけは改行を残す) */
+  .corp-body--flow br,
+  .corp-support p br,
+  .corp-closing-text br { display: none; }
 }
