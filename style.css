@@ -221,7 +221,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .header-nav    { display: none; }
   .header-support-sp { display: block; }
   .nav-toggle    { display: flex; }
-  .hero-img      { height: 100vh; height: 100svh; }
+  .hero-img      { height: auto; }   /* SP: 新ヒーロー素材は下部に赤帯が焼き込まれているため、切らずに全体(縦横比そのまま)を表示 */
   .intro         { padding: 158px 0 110px; }   /* SP: 上(ヒーロー下)=158、下=110。ヒーロー下 158 = AR上(intro pb 110 + AR pt 48 = 158)で一致 */
   .intro p       { font-size: 17px; line-height: 2.8; }   /* SP +2px(15.2px→17px)、行間を少し詰める(3.3→2.8) */
   .sp-br         { display: inline; }              /* SPはご指定の改行位置で表示 */
@@ -292,7 +292,16 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .btn-svg img  { height: 40px; }
   .btn { font-size: 18px; }   /* CSSテキストボタンの文字をCONTACTのSVGボタンに合わせて統一 */
   .header-support-sp { padding: 6px 18px; }   /* ヘッダー内なので高さは抑える */
-  .pc-only { display: none !important; }   /* PC専用要素(講演会のご案内セクション・企業法人ボタン)はSPでは非表示。SP版素材が入り次第対応 */
+  /* --- SP: 支援金募集要項のボタン2つを縦積み --- */
+  .donate-btn-wrap { display: flex; flex-direction: column; align-items: center; gap: 22px; }
+
+  /* --- SP: 講演会のご案内（カンプ実測） --- */
+  .lecture-section .section-title-svg { margin-bottom: 30px; }
+  .lecture-lead  { font-size: 21px; line-height: 1.65; color: var(--text); text-align: center; margin-bottom: 27px; }
+  .lecture-body  { font-size: 17px; line-height: 1.76; color: var(--text); text-align: justify; padding: 0 12px; margin-bottom: 23px; }
+  .lecture-body br { display: none; }   /* SPは自然に折り返す */
+  .lecture-btn-wrap { text-align: center; }
+  .pc-only { display: none !important; }   /* PC専用要素はSPでは非表示 */
 }
 
 /* ============================================================ PC全体: Medium→Regular / Bold→Medium ============================================================ */

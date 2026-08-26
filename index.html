@@ -189,17 +189,21 @@
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1DILhXa41wt5uwXnIUgd5tR2fM9UG1Bz9wDiELXGrGOWsBw/viewform" class="btn-svg"><img src="images/sp/btn-donate.svg" alt="お申込はこちら"></a>
         <!-- PC専用: 企業・法人の皆様へ（TODO: リンク先未定） -->
         <a href="/partnership/" class="btn-svg pc-only"><img src="images/btn-corporate.svg" alt="企業・法人の皆様へ"></a>
+        <a href="/partnership/" class="btn-svg sp-only"><img src="images/sp/btn-corporate.svg" alt="企業・法人の皆様へ"></a>
       </div>
     </div>
   </section>
 
-  <!-- 講演会のご案内（PC専用。SP版はSP素材が入り次第対応） -->
-  <section class="section lecture-section pc-only" id="lecture" style="padding-top:110px; padding-bottom:60px;">
+  <!-- 講演会のご案内 -->
+  <section class="section lecture-section" id="lecture" style="padding-top:110px; padding-bottom:60px;">
     <div class="container">
-      <img src="images/title-lecture.svg" alt="講演会のご案内" class="section-title-svg">
+      <picture class="swap">
+        <source media="(max-width: 768px)" srcset="images/sp/title-lecture.svg">
+        <img src="images/title-lecture.svg" alt="講演会のご案内 開催団体募集" class="section-title-svg">
+      </picture>
       <p class="lecture-lead">
         スポーツの力で世界を変える。<br>
-        ～ アフリカ・ネパールでの国際支援活動から学ぶ ～
+        <span class="pc-only">～ アフリカ・ネパールでの国際支援活動から学ぶ ～</span><span class="sp-only">アフリカ・ネパールでの<br>国際支援活動から学ぶ。</span>
       </p>
       <p class="lecture-body">
         認定NPO法人五条クラブでは、学校・企業・自治体・各種団体を対象に、<br>
@@ -207,7 +211,8 @@
         詳しくは下記詳細からご確認くださいませ。
       </p>
       <div class="lecture-btn-wrap">
-        <a href="/lecture/" class="btn-svg"><img src="images/btn-detail.svg" alt="詳細はこちら"></a>
+        <a href="/lecture/" class="btn-svg pc-only"><img src="images/btn-detail.svg" alt="詳細をみる"></a>
+        <a href="/lecture/" class="btn-svg sp-only"><img src="images/sp/btn-donate.svg" alt="お申込はこちら"></a>
       </div>
     </div>
   </section>
