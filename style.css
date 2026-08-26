@@ -360,7 +360,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .corp-body     { font-size: 16px; line-height: 2.4; color: var(--text); }   /* 同上 */
 
 /* メリット: 2列 */
-.corp-merit    { display: grid; grid-template-columns: max-content max-content; column-gap: 25px; justify-content: start; }
+.corp-merit    { display: grid; grid-template-columns: repeat(2, max-content); column-gap: clamp(24px, 5%, 55px); justify-content: start; }   /* 列間は講演会ページのリストと同じ基準値 */
 .corp-merit li { font-size: 20px; line-height: 1.95; color: var(--text); }
 .corp-merit li::before { content: "・"; }
 
@@ -392,6 +392,11 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .corp-merit { grid-template-columns: 1fr; }
 }
 
+/* メリット2列(20px)は幅を要するため、1060px以下では1列に */
+@media (max-width: 1060px) {
+  .corp-merit { grid-template-columns: 1fr; }
+}
+
 /* ============================================================ PC: ヘッダー / 本文 / フッターの左右余白を90pxに統一（カンプ実測88px） ============================================================ */
 @media (min-width: 961px) {
   .header-inner { padding: 14px 90px; }   /* 40px→90px。ロゴ左端・ボタン右端が本文/フッターと一直線に揃う */
@@ -416,8 +421,12 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 .lec-target li { white-space: nowrap; }
 .lec-target li::before { content: "・"; }
 
+/* 行内に「・項目」を並べる本文(講演内容・講演時間・開催方法・お申し込み)。列間は上のリストと同じ基準値 */
+.lec-dots span         { white-space: nowrap; margin-right: clamp(24px, 5%, 55px); }
+.lec-dots span::before { content: "・"; }
+
 /* 講演テーマ例: 2列 */
-.lec-theme    { display: grid; grid-template-columns: max-content auto; column-gap: 16px; font-size: 16px; line-height: 1.8; color: var(--text); }   /* カンプは1列目318pxだが本文16pxでは最長行(3行目)が収まらないため max-content + 全角スペース相当の16px */
+.lec-theme    { display: grid; grid-template-columns: repeat(2, max-content); justify-content: start; column-gap: clamp(24px, 5%, 55px); font-size: 16px; line-height: 1.8; color: var(--text); }   /* 列間は「このような団体におすすめです」と同じ基準値 */
 .lec-theme li { white-space: nowrap; }
 .lec-theme li::before { content: "・"; }
 
