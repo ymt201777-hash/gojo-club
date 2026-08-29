@@ -294,6 +294,9 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
   .btn { font-size: 18px; }   /* CSSテキストボタンの文字をCONTACTのSVGボタンに合わせて統一 */
   .header-support-sp { padding: 4px clamp(11px, 4.4vw, 18px); font-size: 18px; }   /* ボタン約112x40px(412px時)。狭い端末では左右paddingを詰める */
   .nav-toggle { width: 41px; height: 14px; flex-shrink: 0; }   /* カンプ実測: 横に広く薄い3本線(線2px・間隔4px) */
+  /* 開いた時の×: 3本は y=0/6/12 に並ぶので、上下を中央(6px)まで動かして1点で交差させる */
+  .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
   /* --- SP: 支援金募集要項のボタン2つを縦積み --- */
   .donate-btn-wrap { display: flex; flex-direction: column; align-items: center; gap: 22px; }
 
