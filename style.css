@@ -92,7 +92,8 @@ picture.swap { display: contents; }
 .sp-drawer a:hover { color: var(--primary); }
 
 /* HERO */
-.hero { width: 100%; overflow: hidden; line-height: 0; }
+.hero { width: 100%; overflow: hidden; line-height: 0; position: relative; }   /* 下部の帯リンク(.hero-band-link)の基準 */
+.hero-band-link { display: block; position: absolute; left: 0; right: 0; bottom: 0; }   /* 高さはPC/SPそれぞれのメディアクエリで指定 */
 .hero-img { width: 100%; height: 750px; object-fit: cover; object-position: center; }
 
 /* INTRO */
@@ -544,6 +545,10 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 @media (min-width: 769px) {
   /* 修正案1: ヒーロー下部の「税制優遇の対象です」帯が広い画面で切れるため、下端基準でトリミング */
   .hero-img { object-position: center bottom; }
+  /* 帯リンクの高さ: ヒーローは高さ750px固定でcover表示のため、帯の実寸は画面幅で変わる。
+     画像2880x1682のうち帯は下192px。幅基準(vw/2880)なら192*vw/2880=6.67vw、
+     高さ基準(750/1682=0.4459)になる約1284px未満では192*0.4459=85.6px で頭打ち */
+  .hero-band-link { height: max(86px, 6.67vw); }
 
   /* 修正案2: 税制優遇の図を下げ、見出しと図内ラベルの間に余白を確保 */
   .corp-diagram { margin-top: 50px; }
@@ -566,8 +571,7 @@ article:has(+ .site-footer) .section:last-of-type { padding-bottom: 0; }
 /* ============================================================ SP: デザイナー修正案（2026-08-29） ============================================================ */
 @media (max-width: 768px) {
   /* 修正案1: ヒーロー下部の赤帯を企業・法人ページへのリンクに */
-  .hero { position: relative; }
-  .hero-band-link { display: block; position: absolute; left: 0; right: 0; bottom: 0; height: 14.8%; }   /* 帯は画像高さの561/3794=14.79% */
+  .hero-band-link { height: 14.8%; }   /* SPは画像を全高表示。帯は画像高さの561/3794=14.79% */
 
   /* 修正案2: 企業・法人ページのリード見出しをSVGからテキストにして太字に */
   .corp-headline      { display: none; }
