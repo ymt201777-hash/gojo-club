@@ -171,7 +171,7 @@
             '<li><a href="/staff/">STAFF</a></li>' +
             '<li><a href="/lecture/">講演会のご案内</a></li>' +
             '<li><a href="/partnership/#disclosure">情報公開</a></li>' +
-            '<li><a href="#">お問い合わせ</a></li>' +
+            '<li><a href="mailto:info@gojo-club.jp">お問い合わせ</a></li>' +
           '</ul>' +
         '</div>' +
         '<p class="footer-copy">© 2026 ' + SITE + ' All rights reserved.</p>' +
